@@ -1,0 +1,59 @@
+
+
+//Capture the Image and generate the text to enter.
+public void Enter_Captcha(WebDriver objDriver)
+    {
+        String strval;
+        WebElement objele;
+        try{
+
+        //objele is selenium Webelement 
+        objele = objDriver.findElement(By.xpath("//img[@id='captcha']"));
+        strval = gettext_from_image(objele);
+        objele = objDriver.findElement(By.xpath("//input[@name='PARAM_CAPTCHA']"));
+        objele.sendKeys(strval)      
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+        
+//Generate text from image
+    public String gettext_from_image(WebElement objEL) throws InterruptedException, IOException {
+        Thread.sleep(1000);
+        download_image(objEL);
+        Thread.sleep(1000);
+        Tesseract tesseract = new Tesseract();
+        String text = "";
+        try {
+            // download from - https://github.com/tesseract-ocr/tesseract/wiki/Data-Files
+            //These are language files, if your Captcha is in differnt languge download the required one, i downloaded the eng
+            tesseract.setDatapath("D:/Downloads");  //path of the languge file
+            // the path of your tess data folder
+            // inside the extracted file
+            text = tesseract.doOCR(new File("D:/download_image.jpg")); //path of the image
+            text = text.replaceAll("\\n+","");
+            text = text.replaceAll("\\s+","");
+            if (text.isEmpty())
+            {
+            //Why is this required, during the testing i noticed that sometimes the image is not converted.
+            text = gettext_from_image(objEL);
+                return text;
+            }
+            // path of your image file
+            System.out.print("Text captured : " + text);
+        } catch (TesseractException e) {
+            e.printStackTrace();
+        }
+            return text;
+    }
+    
+    //Download image from selenium WebElement
+    public void download_image(WebElement objEle) throws IOException {
+        String src = objEle.getAttribute("src");
+        BufferedImage bufferedImage = ImageIO.read(new URL(src));
+        File outputfile = new File("D:\\download_image.jpg");
+        ImageIO.write(bufferedImage, "jpg", outputfile);
+
+    }
