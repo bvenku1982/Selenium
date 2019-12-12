@@ -1,6 +1,7 @@
 
 
 //Capture the Image and generate the text to enter.
+//Handle Captcha in selenium
 public void Enter_Captcha(WebDriver objDriver)
     {
         String strval;
