@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_45
+Built-By: ASQ_luxtrust
+Created-By: Apache Maven
+Main-Class: MainClass
+Archiver-Version: Plexus Archiver
+

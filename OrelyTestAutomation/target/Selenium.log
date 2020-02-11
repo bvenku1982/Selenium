@@ -1,0 +1,154 @@
+2020-02-09 17:14:03 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-09 17:14:08 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-09 17:14:08 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-09 17:14:09 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-09 17:14:21 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-09 17:14:22 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-09 17:14:26 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-09 17:14:26 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-09 17:14:27 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-09 17:14:39 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-09 17:24:45 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-09 17:24:49 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-09 17:24:49 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-09 17:24:50 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-09 17:25:13 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-09 17:25:14 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-09 17:25:18 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-09 17:25:18 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-09 17:25:19 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-09 17:25:34 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-09 17:29:39 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-09 17:29:43 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-09 17:29:43 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-09 17:29:44 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-09 17:30:00 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-09 17:30:01 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-09 17:30:04 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-09 17:30:04 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-09 17:30:05 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-09 17:30:21 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:10:21 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:10:26 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:10:26 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:10:32 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:23:04 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:23:09 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:23:09 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:23:11 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:23:30 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:23:31 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:23:34 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:23:34 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:23:36 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:23:55 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:24:07 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:24:12 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:24:12 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:24:14 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:26:50 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:26:54 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:26:54 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:26:56 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:27:52 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:27:53 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:27:57 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:27:57 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:27:58 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:37:02 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:39:22 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:39:27 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:39:27 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:39:29 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:40:13 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:42:51 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:46:59 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:47:04 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:47:04 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:47:05 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:47:30 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:54:32 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:54:36 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:54:36 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:54:38 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:55:00 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:55:24 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:55:27 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:55:27 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:55:28 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:55:51 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 11:56:16 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 11:56:19 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 11:56:19 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 11:56:21 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 11:56:44 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:45:57 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:46:02 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:46:02 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:46:03 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:47:08 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:47:09 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:47:13 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:47:13 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:47:14 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:47:24 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:47:29 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:47:29 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:47:31 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:52:26 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:52:31 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:52:31 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:52:33 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:52:56 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:52:57 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:53:01 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:53:01 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:53:02 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:53:27 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:53:28 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:53:31 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:53:31 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:53:33 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:54:00 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:54:01 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:54:04 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:54:04 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:54:06 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:54:31 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:55:25 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:55:30 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:55:30 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:55:32 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-10 18:57:45 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-10 18:57:57 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-10 18:58:00 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-10 18:58:00 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-10 18:58:02 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:19:37 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-11 09:19:42 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-11 09:19:42 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-11 09:19:44 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:21:27 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-11 09:21:32 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-11 09:21:32 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-11 09:21:34 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:25:25 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-11 09:25:29 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-11 09:25:29 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-11 09:25:31 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:26:02 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-11 09:26:03 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-11 09:26:07 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-11 09:26:07 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-11 09:26:08 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:26:41 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-11 09:26:42 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-11 09:26:45 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-11 09:26:45 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-11 09:26:47 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:27:19 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
+2020-02-11 09:27:20 [INFO ] [InitializeWebDrive] - [standAloneStepUp] Chrome
+2020-02-11 09:27:23 [INFO ] [InitializeWebDrive] - [browserInit] Chrome
+2020-02-11 09:27:23 [INFO ] [BrowserHelper] - [navigateTo] https://orely.dev.luxtrust.net/demo/startParametrized.jsp
+2020-02-11 09:27:25 [INFO ] [InitializeWebDrive] - [browserInit] Initializing the driver
+2020-02-11 09:28:00 [INFO ] [InitializeWebDrive] - [tearDownDriver] Shutting Down the driver
