@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Dashboard Reports</title>
+		
+			<link href="Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+			<link href="Bootstrap/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+			<link href="Bootstrap/dist/css/sb-admin-2.css" rel="stylesheet">
+			<link href="Bootstrap/vendor/morrisjs/morris.css" rel="stylesheet">
+			<link href="Bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			<link rel="stylesheet" type="text/css" href="src/jquery.jqplot.css" />
+			<link href="Highchart/CustomisedStyleSheet.css" rel="stylesheet">
+
+			<link href="Scripts/Themes/redmond/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+			<link href="Scripts/Themes/ui.jqgrid.css" rel="stylesheet" />
+
+			<!--script src="Scripts/JSONData.js"></script-->
+			<!--script src="Releases/CurrentRelease.js"></script-->
+			<script src="Bootstrap/vendor/jquery/jquery.min.js"></script>
+			<script src="Scripts/jqgrid/jquery.jqGrid.min.js"></script>
+			<script src="Scripts/jqgrid/i18n/grid.locale-en.js"></script>
+
+
+			<script src="Bootstrap/canvasjs.min.js"></script>
+
+			<script src="Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+			<script src="Bootstrap/vendor/metisMenu/metisMenu.min.js"></script>
+			<script src="Bootstrap/vendor/raphael/raphael.min.js"></script>
+			<script src="Bootstrap/vendor/morrisjs/morris.min.js"></script>
+			<!--script src="Bootstrap/data/morris-data.js"></script-->
+			<!--script src="Bootstrap/dist/js/sb-admin-2.js"></script-->
+
+			<script type="text/javascript">
+			
+			var head = document.getElementsByTagName('head')[0];
+			var script = document.createElement('script');
+			var jsonCurrentReleasePath;
+			var GridFilterStatus ="";
+			script.type = 'text/javascript';
+	
+			if (document.location.href.indexOf('release=') > -1) {
+				//alert('hi');
+				var tempUrl = document.location.href.split('release=')[1];
+				if (tempUrl.indexOf('status=') > -1) {
+					jsonCurrentReleasePath = tempUrl.split('?status=')[0];
+					GridFilterStatus = tempUrl.split('?status=')[1];
+				}else
+				{
+					jsonCurrentReleasePath = tempUrl;					
+				}				
+				
+				//jsonCurrentReleasePath = document.location.href.split('release=')[1];
+				console.log(jsonCurrentReleasePath);
+				script.src = jsonCurrentReleasePath;
+				head.appendChild(script);
+				 //window.location.reload();
+				//document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1?release="+jsonCurrentReleasePath;
+			}
+			else {
+				//alert('hello');
+				
+				if (document.location.href.indexOf('?status=') > -1) {					
+					GridFilterStatus = document.location.href.split('?status=')[1];
+				}
+				
+				script.src = "Releases/CurrentRelease.js";
+				head.appendChild(script);
+				console.log('log', head);
+				 //window.location.reload();
+				//document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1";	
+			}
+			
+			window.onload = function () {
+			if (document.location.href.indexOf('release=') > -1) {				
+				document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1?release="+jsonCurrentReleasePath;
+				document.getElementById("IdIndex").href = "index.html?release="+jsonCurrentReleasePath;
+			}
+			else {				
+				document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1";	
+				document.getElementById("IdIndex").href = "index.html";	
+			}
+			
+				function startTime() {
+					var today = new Date();
+					var h = today.getHours();
+					var m = today.getMinutes();
+					var s = today.getSeconds();
+					// add a zero in front of numbers<10
+					m = checkTime(m);
+					s = checkTime(s);
+					//document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+					document.getElementById('txt').innerHTML = today;
+					t = setTimeout(startTime, 500);
+				}
+				function checkTime(i) {
+					if (i < 10) {
+						i = "0" + i;
+					}
+					return i;
+				}
+
+				//chart2.render();
+				//chart1.render();
+
+				startTime();
+			}
+			
+				function sleep (time) {
+				  return new Promise((resolve) => setTimeout(resolve, time));
+				}
+
+				// Usage!
+				sleep(500).then(() => {
+				$(document).ready(function () {
+					// debugger;     
+
+					var passCount = 0;
+					var failCount = 0;
+					var warningCount = 0;
+					var RunStarted = 0;
+					var RunEnded = 0;
+					var RunTime = 0;
+
+					var objDuration = new Array();
+					var objTestCaseId = new Array();
+					var arr=[''];
+					var strStatus = ":[ALL]";
+					var strSystemIP = ":[All]";
+					var obj = ExecutionDetails;
+					$.each(obj, function (k, v) {
+						objDuration[k] = GetTimeInSeconds(obj[k].Duration);
+						objTestCaseId[k] = obj[k].TestCaseID;
+						//console.log(strSystemIP);
+						//console.log(obj[k].SystemIP);
+						//console.log(strSystemIP.indexOf(obj[k].SystemIP) == -1);
+						if(strSystemIP.indexOf(obj[k].SystemIP) === -1)
+						{
+							strSystemIP = strSystemIP +";"+obj[k].SystemIP+":"+obj[k].SystemIP;
+							
+						}
+						
+						if(strStatus.indexOf(obj[k].Status) === -1)
+						{
+							strStatus = strStatus +";"+obj[k].Status+":"+obj[k].Status;
+							
+						}
+
+						if (obj[k].Status == "Pass") {
+							passCount++;
+						} else if (obj[k].Status == "Fail") {
+							failCount++;
+						} else {
+							warningCount++;
+						}
+
+						PudateHTMLParameters(passCount, failCount, warningCount);
+					});
+
+					
+					var obj2 = TestSuiteExecutionDetails;
+					$.each(obj2, function (k, v) {
+						RunStarted = obj2[k].RunStarted;
+						RunEnded = obj2[k].RunEnded;
+						RunTime = obj2[k].TotalTime;
+
+						ExecutedBy = obj2[k].ExecutedBy;
+						ComputerName = obj2[k].ComputerName;
+						SystemDate = obj2[k].SystemDate;
+						BrowserType = obj2[k].BrowserType;
+						ProjectName = obj2[k].ProjectName;
+						Environment = obj2[k].Environment;
+						Release = obj2[k].Release;
+						Run = obj2[k].Run;
+						
+						document.getElementById("SystemDate").innerHTML = SystemDate;
+						document.getElementById("RunStarted").innerHTML = RunStarted;
+						document.getElementById("RunEnded").innerHTML = RunEnded;
+						document.getElementById("TotalExecutionTime").innerHTML = RunTime;
+
+						document.getElementById("ExecutedBy").innerHTML = ExecutedBy.toUpperCase();
+						document.getElementById("BrowserType").innerHTML = BrowserType.toUpperCase();
+						document.getElementById("ProjectName").innerHTML = ProjectName.toUpperCase();
+						document.getElementById("TargettedEnvironment").innerHTML = Environment.toUpperCase();
+						document.getElementById("Release").innerHTML = Release.toUpperCase();
+						document.getElementById("Run").innerHTML = Run.toUpperCase();
+						//document.getElementById("ComputerName").innerHTML = "Computer Name : " + ComputerName;
+						//document.getElementById("DomainName").innerHTML = "Domain Name  : Telecom";
+						//document.getElementById("Tools").innerHTML = "Automation Tools : Selenium WebDriver - JAVA";
+
+					});
+					//var categoriesStr = ":All;1:sport;2:science";
+					/*
+					$('#MainReport').jqGrid({
+
+						datatype: 'local',
+						data: obj,
+						autowidth: true,
+						shrinkToFit: true,
+						colNames: ['TestCaseID', 'SystemIP', 'TestTitle', 'Duration', 'Status', 'DetailResults'],
+						colModel: [{ name: 'TestCaseID', index: 'TestCaseID', align: 'center', width: 50, key: true },
+						{ name: 'SystemIP', index: 'SystemIP', width: 50, align: 'center', key: true },
+						{ name: 'TestTitle', index: 'TestTitle', width: 100, key: true },
+						{ name: 'Duration', index: 'Duration', width: 50, align: 'center', key: true },
+						{ name: 'Status', index: 'Status', width: 50, align: 'center', key: true, formatter: imageFormat },
+						{ name: 'DetailResults', index: 'DetailResults', width: 50, align: 'center', formatter: linkFormater }
+						],
+
+
+						search: true,
+						// jsonReader: {cell:""},
+						rowNum: 10,
+						color: 'black',
+						rowList: [10, 20, 30, 40, 50, 100, 150, 200],
+						sortname: 'TestCaseID',
+						height: 'auto',
+						//pginput: true,
+						rownumbers: true,
+						gridview: true,
+						loadonce: true,
+						sortorder: "asc",
+						recordpos: 'right',
+						scrollOffset: 0,
+						viewrecords: true,
+						//height: "100%",
+						//width : "100%",
+						//align: 'center-right',
+						jsonReader: {
+							repeatitems: false,
+							root: function (obj) { return obj; },
+							page: function (obj) { return grid.jqGrid('getGridParam', 'gridpager'); },
+							total: function (obj) { return Math.ceil(obj.length / grid.jqGrid('getGridParam', 'rowNum')); },
+							records: function (obj) { return obj.length; }
+						},
+
+						pager: "#gridpager",
+						emptyrecords: "Nothing to display",
+						imgpath: 'Scripts/Themes/redmond/images',
+						pgbuttons: true,
+						caption: "Summary Report",
+					});
+
+
+
+
+					// Override default pager icons
+					$grid = $("#gridpager");
+					$pager = $grid.closest(".ui-jqgrid").find(".ui-pg-table");
+
+					var icon = $pager.find(".ui-pg-button>span.ui-icon-seek-start");
+					icon.removeClass("ui-icon ui-icon-seek-first");
+					icon.addClass("Scripts\\Themes\\redmond\\images\\ui-icons_cd0a0a_256x240.png");
+
+					$pager.find(".ui-pg-button>span.ui-icon-seek-prev")
+						.removeClass("ui-icon ui-icon-seek-prev")
+						.addClass("ui-icon ui-icon-arrowthick-1-w")
+						//.addClass("ui-icon ui-icon-triangle-1-w")
+						;
+
+					$pager.find(".ui-pg-button>span.ui-icon-seek-next")
+						.removeClass("ui-icon ui-icon-seek-next")
+						.addClass("ui-icon ui-icon-arrowthick-1-e")
+						//.addClass("ui-icon  ui-icon-triangle-1-e")
+						;
+
+					$pager.find(".ui-pg-button>span.ui-icon-seek-end")
+						.removeClass("ui-icon ui-icon-seek-end")
+						.addClass("ui-icon ui-icon-arrowthickstop-1-e");
+
+
+					//jQuery("#MainReport").jqGrid('filterToolbar', { searchOperators: true, searchOnEnter: true, autosearch: true });
+
+					*/
+			function getUrlParameter(sParam) {
+				var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+					sURLVariables = sPageURL.split('&'),
+					sParameterName,
+					i;
+
+				for (i = 0; i < sURLVariables.length; i++) {
+					sParameterName = sURLVariables[i].split('=');
+
+					if (sParameterName[0] === sParam) {
+						return sParameterName[1] === undefined ? true : sParameterName[1];
+					}
+				}
+			}
+			
+			function ChangeUrl(page, url) {
+				if (typeof (history.pushState) != "undefined") {
+					var obj = { Page: page, Url: url };
+					history.pushState(obj, obj.Page, obj.Url);
+				} else {
+					alert("Browser does not support HTML5.");
+				}
+			}
+			
+			var page = getUrlParameter('page') || 1;
+			if (typeof(getUrlParameter('page')) == 'undefined') {
+				var symbol = (window.location.href.indexOf("?") > -1) ? '&': '?';
+				ChangeUrl('Page'+page, window.location.href += symbol + "page="+page);
+			}
+			
+			$("#MainReport").jqGrid({
+
+					datatype: 'local',
+					data: ExecutionDetails,
+					autowidth: true,
+					shrinkToFit: true,               
+					page: page,
+					colMenu : false,
+					colModel: [
+						 {   label : "Test Suite ID",
+							//sorttype: 'integer',
+							name: 'TestSuiteID', 
+							key: true, 
+							width: 30,
+							align: 'center',
+							searchoptions : { sopt:['cn']}
+						},
+						{   label : "Test Case ID",
+							//sorttype: 'integer',
+							name: 'TestCaseID', 
+							key: true, 
+							width: 30,
+							align: 'center',
+							searchoptions : { sopt:['cn']}
+						},
+						{
+							label: "System IP",
+							name: 'SystemIP',
+							width: 30,
+							align: 'center',
+							// stype defines the search type control - in this case HTML select (dropdownlist)
+							stype: "select",
+							// searchoptions value - name values pairs for the dropdown - they will appear as options
+							
+							searchoptions: { 							
+							attr: {
+								style: "width:150%;padding:0;max-width:150%;float:center"
+									},
+									value: strSystemIP } //":[All];255.255.254.0:255.255.254.0;255.255.254.10:255.255.254.10"
+						},
+						{ 
+							label: "Test Title",
+							name: 'TestTitle',
+							width: 200,
+							
+							searchoptions: {
+								// dataInit is the client-side event that fires upon initializing the toolbar search field for a column
+								// use it to place a third party control to customize the toolbar
+							   attr: {
+								style: "width:1000%;padding:0;max-width:1000%;float:center"
+									},
+							   sopt : ['cn']
+							}
+						},  
+						{   label : "Browser",
+							//sorttype: 'integer',
+							name: 'Browser', 
+							key: true, 
+							width: 30,
+							align: 'center',
+							searchoptions : { sopt:['cn']}
+						},					
+						{
+							label : "Duration",
+							name: 'Duration',						
+							width: 30,
+							align: 'center',
+							searchoptions: {
+								// dataInit is the client-side event that fires upon initializing the toolbar search field for a column
+								// use it to place a third party control to customize the toolbar
+								sopt : ['cn'],
+								
+							}
+						},
+						{
+							label : "Status",
+							name: 'Status',
+							width: 30,
+							align: 'center',
+							formatter: imageFormat,
+							//multiselect : true,
+							stype: "select",
+							searchoptions: {				
+							defaultValue: GridFilterStatus,
+							autosearch: true,
+							attr: {
+								style: "width:150%;padding:0;max-width:150%;float:center"
+									},
+									value: strStatus } //":[All];255.255.254.0:255.255.254.0;255.255.254.10:255.255.254.10"
+						},
+						{
+							label : "Detail Results",
+							name: 'DetailResults',
+							width: 30,
+							align: 'center',						
+							index: 'DetailResults',
+							formatter: linkFormater,
+							//formatter: 'showlink', 
+							formatoptions: { baseLinkUrl: 'javascript:', showAction: "Link('", addParam: "');"},
+							searchoptions: {
+								// dataInit is the client-side event that fires upon initializing the toolbar search field for a column
+								// use it to place a third party control to customize the toolbar
+								sopt : ['cn']
+							}
+						}                    
+					],
+					loadonce: true,
+					viewrecords: true,
+					width: 780,
+					align: 'center',
+					height: 550,
+					rowNum: 25,
+					pager: "#gridpager"
+				});
+				
+				var totalJQGridPages = $("#MainReport").jqGrid('getGridParam', 'lastpage');
+				
+				$("span.ui-icon").click(function () {
+					var button = $(this), oldPage = page;
+					if (button.hasClass('ui-icon-seek-first')) {
+						page = 1;
+					}
+					else if (button.hasClass('ui-icon-seek-prev') && page > 1) {
+						page = parseInt(page) - 1;
+					}
+					else if (button.hasClass('ui-icon-seek-next') && page < totalJQGridPages) {
+						page = parseInt(page) + 1;
+					}
+					else if (button.hasClass('ui-icon-seek-end')) {
+						page = totalJQGridPages;
+					}
+					
+					ChangeUrl('Page'+page, window.location.href.replace("page="+oldPage, "page="+page));
+				});
+				// activate the toolbar searching
+				$('#MainReport').jqGrid('filterToolbar');
+							
+
+				});
+				})	
+				
+
+
+				function Link(id) {
+					
+					var row = id.split("=");
+					var row_ID = row[1];				
+					var TestCaseID= $("#MainReport").getCell(row_ID, 'TestCaseID');
+					console.log (TestCaseID)
+					var url = "DetailReport.html?testcaseid="+TestCaseID;
+					window.open(url,"","");				
+				}
+
+				function imageFormat(cellvalue, options, rowObject) {
+					if (cellvalue == "Pass") {
+						return "<img src='Logos/pass.ico' />";
+					} else if (cellvalue == "Fail") {
+						return "<img src='Logos/fail.ico' />";
+					} else {
+						return "<img src='Logos/warning.png' />";
+					}
+				}
+
+				function linkFormater(cellvalue, options, rowObject) {
+					//return "<a href='" + cellvalue + "'><u>Show Details</u></a>";
+					//console.log (cellvalue);
+					//console.log (options);
+					//console.log (rowObject);
+					var url = "DetailReport.html?testcaseid="+rowObject.TestCaseID
+					//var url = "DetailReport.html?testcaseid="+options.rowId
+					
+					if (document.location.href.indexOf('release=') > -1) {
+						//alert('hi');
+						jsonCurrentReleasePath = document.location.href.split('release=')[1];
+						console.log(jsonCurrentReleasePath);
+						//script.src = jsonCurrentReleasePath;
+						//head.appendChild(script);
+						 //window.location.reload();
+						//document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1?release="+jsonCurrentReleasePath;
+						url = url + "?release="+jsonCurrentReleasePath;
+					}
+					
+					return "<a href='"+url+"'><u>Detail Report</u></a>";
+					//return "<a href='DetailReport.html'><u>Detailed Report..</u></a>";
+					
+				}
+
+				function GetTimeInSeconds(DurationTime) {
+					var str = DurationTime.split(":");
+					var k = str[0] * 3600 + str[1] * 60 + str[2] * 1;
+					return k / 60;
+				}
+
+				function PudateHTMLParameters(passCount, failCount, warningCount, RunStarted, RunEnded, RunTime) {
+					//document.getElementById("TestsPassed").innerHTML = "Total no of Tests Passed : " + passCount; 		
+					//document.getElementById("TestsFailed").innerHTML = "Total no of Tests failed : " + failCount;
+					//document.getElementById("TotalScripts").innerHTML = " Total no of Tests Executed : "+ (eval(passCount ) + eval(failCount)+ eval(warningCount));
+					//document.getElementById("TestsWarnings").innerHTML = "Total no of Tests completed with Warning : " + warningCount;
+				}
+
+
+
+
+
+				$('#MainReport').jqGrid('navButtonAdd', '#myGrid_toppager', {
+					caption: "<select id='gridFilter' onchange='ChangeGridView()'><option>Inbox</option><option>Sent Messages</option></select>",
+					title: "Apply Filter",
+					onClickButton: function () {
+					}
+				});
+
+				function ChangeGridView() {
+					var gridViewFilter = $("#gridFilter").val();
+					$('#myGrid').setGridParam({ datatype: 'json', url: '../../Controller/ActionJSON', postData: { msgFilter: gridViewFilter } });
+					$('#myGrid').trigger("reloadGrid");
+				};
+
+				setInterval(function() {
+					  window.location.reload();
+					}, 300000);
+				
+				//setInterval(page_refresh, 5*60000); 
+				//NOTE: period is passed in milliseconds
+
+			</script>
+			<style type="text/css">
+				.auto-style1 {
+					font-style: italic;
+					font-weight: bold;
+					text-align: Right;
+				}
+			</style>
+			
+			<style>
+			.btn-group,row {
+				color: red;				
+				width: 97.5%;
+				float: none;
+				margin: 5px auto;
+				display: block;
+			}
+			.row{
+				margin-left: 0.5%;
+				margin-right: 0.5%;
+			}
+		</style>
+	</head>
+	<body background="Logos/pexels-photo-207962.jpeg">
+	<!--body style="background:#81BEF7"-->
+		<!--div id="txt" align="right" style="background:#81BEF7" size="25" color="black"></div-->
+				
+				<div class="row" >
+			<table style="width:100%">
+				<tr>
+					<td style="width:2%"></td>
+					<td style="width:48%">
+						<span id="txt" align="left"  size="50" color="black"></span>
+					</td>
+					<td style="width:50%" align="right"></td>				
+				</tr>			
+			</table>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div class="panel-heading" align="center">
+							<font size="5">EXECUTION SUMMARY REPORT</font>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="btn-group btn-group-justified">
+					  <a href="Index.html" class="btn btn-primary">Reset</a>
+					  <a href="Index.html" id = "IdIndex" class="btn btn-primary">Dashboard</a>
+					  <a href="ExecutionSummary.html" id = "IdExecutionSummary" class="btn btn-primary">Summary Report</a>
+					  <a href="#" class="btn btn-primary">System Wise Report</a>
+					  <a href="javascript:history.go(0)" class="btn btn-primary">Refresh</a>
+					  <a onClick="window.print()" class="btn btn-primary">Print</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		
+		
+		
+
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div align="center">
+							<font size="3">SYSTEM DETAILS</font>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="panel-footer">
+						<table border="0" width="100%">
+							<tr>
+								<td width="40%" align="left">
+									<div>
+										<font size="3">Executed By :</font>
+									</div>
+								</td>
+								<!--td width="60%" align = "left"><div><font size="3" >Kreddy</font></div></td-->
+								<td width="60%" align="left">
+									<div><span id="ExecutedBy"><font size="3" >NULL</font></div></td>
+								</tr>
+								<tr>
+									<td width="40%" align = "left"><div><font size="3" >Project Name :</font></div></td>
+									<td width="60%" align = "left"><div><span id="ProjectName"><font size="3" >NULL</font></div></td>
+								</tr>
+								<tr>
+									<td width="40%" align = "left"><div><font size="3" >Environment :</font></div></td>
+									<!--td width="60%" align = "left"><div><font size="3" >Live</font></div></td-->		
+									<td width="60%" align = "left"><div><span id="TargettedEnvironment"><font size="3" >NULL</font></div></td>										
+								</tr>
+								<tr> 
+									<td width="40%" align = "left"><div><font size="3" >Browser :</font></div></td>
+									<!--td width="60%" align = "left"><div><font size="3" >Chrome</font></div></td-->
+									<td width="60%" align = "left"><div><span id="BrowserType"><font size="3" >NULL</font></div></td>
+								</tr>
+								<tr> 
+									<td width="40%" align = "left"><div><font size="3" >Release :</font></div></td>
+									<!--td width="60%" align = "left"><div><font size="3" >Chrome</font></div></td-->
+									<td width="60%" align = "left"><div><span id="Release"><font size="3" >NULL</font></div></td>
+								</tr>
+							</table>
+						</div> 
+					</div>
+				</div>
+			
+			 <div class="col-lg-6 col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">  
+						<div align = "center"><font size="3">EXECUTION DETAILS</font></div>
+						<div class="clearfix"></div>
+					</div>
+					 <div class="panel-footer">                            							
+						<table border="0" width="100%">
+							<tr>
+								<td width="40%" align = "left"><div><font size="3" >Run :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:09 IST 2015</font></div></td-->
+								<td width="60%" align = "left"><div><span id="Run"><font size="3" >NULL</font></div></td>
+								
+							</tr>
+							<tr>
+								<td width="40%" align = "left"><div><font size="3" >Execution Date :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:09 IST 2015</font></div></td-->
+								<td width="60%" align = "left"><div><span id="SystemDate"><font size="3" >NULL</font></div></td>
+								
+							</tr>
+							<tr>
+								<td width="40%" align = "left"><div><font size="3" >Execution Started :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:08 IST 2015</font></div></td-->	
+								<td width="60%" align = "left"><div><span id="RunStarted"><font size="3" >NULL</font></div></td>									
+							</tr>
+							<tr> 
+								<td width="40%" align = "left"><div><font size="3" >Execution Ended :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:47 IST 2015</font></div></td-->
+								<td width="60%" align = "left"><div><span id="RunEnded"><font size="3" >NULL</font></div></td>
+							</tr>
+							<tr> 
+								<td width="40%" align = "left"><div><font size="3" >Execution Time :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >0 : 0 : 38</font></div></td-->
+								<td width="60%" align = "left"><div><span id="TotalExecutionTime"><font size="3" >NULL</font></div></td>
+							</tr>
+						</table>
+					</div>                  
+				</div>
+			</div>				
+		</div>	
+				
+		<div class="row">
+			<div class="col-lg-12 col-md-12" align="center" style="height: 100%; width: 100%;">
+				<div class="panel panel-primary">						
+						<table id="SummaryReport" align="center" style="height: 100%; width: 99%;"> 
+							<tr width = "100%"> 									
+								<td width = "100%"> 
+									<div class="col-lg-24" align="center" width = "100%">
+										<table id="MainReport" align="center"width = "100%"> </table>
+										<div id="gridpager"></div>									 
+										<!--div id="morris-bar" align="center" style="height: 415px; width: 100%;"></div-->  
+									</div> 
+								</td>
+							</tr>								
+						</table>
+					
+				</div>	
+			</div>	
+		</div>	
+		
+		<div class="row">
+			<div class="col-lg-3 col-md-3" align="center" style="height: 100px; width: 100%;">
+			</div>
+		</div>			
+	</body>
+</html>

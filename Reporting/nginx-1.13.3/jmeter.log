@@ -1,0 +1,1654 @@
+2017/09/04 13:27:34 INFO  - jmeter.util.JMeterUtils: Setting Locale to en_GB 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Loading user properties from: C:\RunnableSoftwares\apache-jmeter-3.0\bin\user.properties 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Loading system properties from: C:\RunnableSoftwares\apache-jmeter-3.0\bin\system.properties 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Copyright (c) 1998-2016 The Apache Software Foundation 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Version 3.0 r1743807 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: java.version=1.8.0_144 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: os.name=Windows 10 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: os.arch=amd64 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: os.version=10.0 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: file.encoding=Cp1252 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Max memory     =523763712 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Available Processors =8 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Default Locale=English (United Kingdom) 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: JMeter  Locale=English (United Kingdom) 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: JMeterHome=C:\RunnableSoftwares\apache-jmeter-3.0 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: user.dir  =C:\RunnableSoftwares\nginx-1.13.3 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: PWD       =C:\RunnableSoftwares\nginx-1.13.3 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: IP: 10.144.100.24 Name: ULD06901 FullName: ULD06901.INTERNAL.COLT.NET 
+2017/09/04 13:27:34 INFO  - jmeter.gui.action.LookAndFeelCommand: Using look and feel: javax.swing.plaf.metal.MetalLookAndFeel [Metal, CrossPlatform] 
+2017/09/04 13:27:34 INFO  - jmeter.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties 
+2017/09/04 13:27:35 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must contain the string: '.functions.' 
+2017/09/04 13:27:35 INFO  - jmeter.engine.util.CompoundVariable: Note: Function class names must not contain the string: '.gui.' 
+2017/09/04 13:27:37 WARN  - org.jmeterplugins.repository.PluginManagerMenuItem: Failed to load plugin updates info java.net.SocketTimeoutException: connect timed out
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:542)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:412)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:179)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:328)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:107)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.jmeterplugins.repository.PluginManager.getJSON(PluginManager.java:149)
+	at org.jmeterplugins.repository.PluginManager.load(PluginManager.java:78)
+	at org.jmeterplugins.repository.PluginManagerMenuItem.<init>(PluginManagerMenuItem.java:22)
+	at org.jmeterplugins.repository.PluginManagerMenuCreator.getMenuItemsAtLocation(PluginManagerMenuCreator.java:22)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.addPluginsMenuItems(JMeterMenuBar.java:572)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.makeOptionsMenu(JMeterMenuBar.java:349)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.createMenuBar(JMeterMenuBar.java:268)
+	at org.apache.jmeter.gui.util.JMeterMenuBar.<init>(JMeterMenuBar.java:161)
+	at org.apache.jmeter.gui.MainFrame.init(MainFrame.java:493)
+	at org.apache.jmeter.gui.MainFrame.<init>(MainFrame.java:241)
+	at org.apache.jmeter.JMeter.startGui(JMeter.java:327)
+	at org.apache.jmeter.JMeter.start(JMeter.java:480)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.jmeter.NewDriver.main(NewDriver.java:259)
+
+2017/09/04 13:27:37 INFO  - jmeter.util.BSFTestElement: Registering JMeter version of JavaScript engine as work-round for BSF-22 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.sampler.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser 
+2017/09/04 13:27:38 INFO  - jorphan.exec.KeyToolUtils: keytool found at 'C:\Program Files\Java\jre1.8.0_144\bin\keytool' 
+2017/09/04 13:27:38 INFO  - jmeter.protocol.http.proxy.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file C:\RunnableSoftwares\apache-jmeter-3.0\bin\proxyserver.jks 
+2017/09/04 13:27:38 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.config.MongoSourceElement 
+2017/09/04 13:27:38 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.sampler.MongoScriptSampler 
+2017/09/04 13:27:39 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.visualizers.DistributionGraphVisualizer 
+2017/09/04 13:27:39 INFO  - jmeter.samplers.SampleResult: Note: Sample TimeStamps are START times 
+2017/09/04 13:27:39 INFO  - jmeter.samplers.SampleResult: sampleresult.default.encoding is set to ISO-8859-1 
+2017/09/04 13:27:39 INFO  - jmeter.samplers.SampleResult: sampleresult.useNanoTime=true 
+2017/09/04 13:27:39 INFO  - jmeter.samplers.SampleResult: sampleresult.nanoThreadSleep=5000 
+2017/09/04 13:27:39 INFO  - jmeter.gui.util.MenuFactory: Skipping org.apache.jmeter.visualizers.SplineVisualizer 
+2017/09/04 13:29:35 INFO  - jmeter.services.FileServer: Default base='C:\RunnableSoftwares\nginx-1.13.3' 
+2017/09/04 13:29:35 INFO  - jmeter.gui.action.Load: Loading file: \\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod\Prod_API_HealthCheck_Test_04SEP17.jmx 
+2017/09/04 13:29:35 INFO  - jmeter.services.FileServer: Set new base='\\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod' 
+2017/09/04 13:29:35 INFO  - jmeter.save.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2 
+2017/09/04 13:29:35 INFO  - jmeter.save.SaveService: Using SaveService properties file encoding UTF-8 
+2017/09/04 13:29:35 INFO  - jmeter.save.SaveService: Using SaveService properties version 2.9 
+2017/09/04 13:29:35 INFO  - jmeter.save.SaveService: All converter versions present and correct 
+2017/09/04 13:29:35 INFO  - jmeter.save.SaveService: Loading file: \\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod\Prod_API_HealthCheck_Test_04SEP17.jmx 
+2017/09/04 13:29:35 INFO  - jmeter.protocol.http.control.CacheManager: Will only cache the following methods: [GET] 
+2017/09/04 13:29:35 INFO  - jmeter.protocol.http.control.CookieManager: Settings: Delete null: true Check: true Allow variable: true Save: false Prefix: COOKIE_ 
+2017/09/04 13:29:36 INFO  - jmeter.services.FileServer: Set new base='\\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod' 
+2017/09/04 16:21:52 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 16:21:52 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 16:21:52 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 16:21:52 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 16:21:52 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 16:21:52 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 16:21:52 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 16:21:52 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 16:21:52 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 16:21:52 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 16:21:52 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 16:21:52 INFO  - jmeter.protocol.http.sampler.HTTPHCAbstractImpl: Local host = ULD06901 
+2017/09/04 16:21:52 INFO  - jmeter.protocol.http.sampler.HTTPHC4Impl: HTTP request retry count = 0 
+2017/09/04 16:21:52 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:52 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 16:21:52 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:52 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 16:21:57 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/04 16:21:57 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 16:21:58 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:21:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:21:59 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 16:21:59 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 16:21:59 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 16:22:00 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 16:25:11 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 16:25:11 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 16:25:11 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 16:25:11 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 16:25:11 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 16:25:11 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 16:25:11 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 16:25:11 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 16:25:11 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 16:25:11 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 16:25:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:11 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 16:25:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:15 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 16:25:16 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:25:16 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:25:17 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 16:25:17 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 16:25:17 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 16:25:17 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 16:47:29 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 16:47:29 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 16:47:29 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 16:47:29 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 16:47:29 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 16:47:29 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 16:47:29 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 16:47:29 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 16:47:29 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 16:47:29 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 16:47:30 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:30 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 16:47:30 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:30 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 16:47:33 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:47:33 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:47:33 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 16:47:33 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 16:47:33 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 16:47:33 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 16:57:13 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 16:57:13 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 16:57:13 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 16:57:13 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 16:57:13 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 16:57:13 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 16:57:13 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 16:57:13 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 16:57:13 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 16:57:13 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 16:57:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:13 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 16:57:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:13 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 16:57:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:15 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 16:57:16 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 16:57:16 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 16:57:16 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 16:57:16 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 16:57:16 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 16:57:16 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 17:07:24 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 17:07:24 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 17:07:24 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 17:07:24 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 17:07:24 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 17:07:24 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 17:07:24 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 17:07:24 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 17:07:24 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 17:07:24 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 17:07:25 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:25 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 17:07:25 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:25 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 17:07:27 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 17:07:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 17:07:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:07:28 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:07:28 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 17:07:28 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 17:07:28 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 17:07:28 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 17:12:07 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 17:12:07 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 17:12:07 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 17:12:07 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 17:12:07 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 17:12:07 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 17:12:07 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 17:12:07 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 17:12:07 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 17:12:07 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 17:12:08 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:08 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 17:12:08 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:08 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Location Name :  
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 17:12:11 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:12:11 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:12:11 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 17:12:11 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 17:12:11 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 17:12:12 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 17:13:18 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 17:13:18 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 17:13:19 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 17:13:19 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 17:13:19 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 17:13:19 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 17:13:19 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 17:13:19 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 17:13:19 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 17:13:19 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 17:13:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:20 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 17:13:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:20 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 17:13:22 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:22 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:13:23 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/04 17:13:33 ERROR - jmeter.functions.JavaScript: Error processing Javascript: ["REQUESTED"!="COMPLETED" ||  ${countervalue} ==5]
+ org.mozilla.javascript.EvaluatorException: missing ; before statement (<cmd>#1)
+	at org.mozilla.javascript.DefaultErrorReporter.runtimeError(DefaultErrorReporter.java:77)
+	at org.mozilla.javascript.DefaultErrorReporter.error(DefaultErrorReporter.java:64)
+	at org.mozilla.javascript.Parser.addError(Parser.java:188)
+	at org.mozilla.javascript.Parser.addError(Parser.java:166)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:256)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:243)
+	at org.mozilla.javascript.Parser.reportError(Parser.java:236)
+	at org.mozilla.javascript.Parser.autoInsertSemicolon(Parser.java:1100)
+	at org.mozilla.javascript.Parser.statementHelper(Parser.java:1077)
+	at org.mozilla.javascript.Parser.statement(Parser.java:934)
+	at org.mozilla.javascript.Parser.parse(Parser.java:573)
+	at org.mozilla.javascript.Parser.parse(Parser.java:511)
+	at org.mozilla.javascript.Context.compileImpl(Context.java:2488)
+	at org.mozilla.javascript.Context.compileString(Context.java:1476)
+	at org.mozilla.javascript.Context.compileString(Context.java:1465)
+	at org.mozilla.javascript.Context.evaluateString(Context.java:1216)
+	at org.apache.jmeter.functions.JavaScript.executeWithRhino(JavaScript.java:184)
+	at org.apache.jmeter.functions.JavaScript.execute(JavaScript.java:100)
+	at org.apache.jmeter.engine.util.CompoundVariable.execute(CompoundVariable.java:142)
+	at org.apache.jmeter.engine.util.CompoundVariable.execute(CompoundVariable.java:117)
+	at org.apache.jmeter.testelement.property.FunctionProperty.getStringValue(FunctionProperty.java:101)
+	at org.apache.jmeter.testelement.AbstractTestElement.getPropertyAsString(AbstractTestElement.java:271)
+	at org.apache.jmeter.protocol.java.sampler.BeanShellSampler.getScript(BeanShellSampler.java:70)
+	at org.apache.jmeter.protocol.java.sampler.BeanShellSampler.sample(BeanShellSampler.java:105)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:465)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:410)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:241)
+	at java.lang.Thread.run(Unknown Source)
+
+2017/09/04 17:13:33 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - ${countervalue} and the Port status is - REQUESTED 
+2017/09/04 17:13:44 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``//log.info("Port Status - " +"COMPLETED");  long number = Long.parseLong(vars.ge . . . '' : Typed variable declaration : Method Invocation Long.parseLong 
+2017/09/04 17:13:44 WARN  - jmeter.extractor.BeanShellPostProcessor: Problem in BeanShell script org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``//log.info("Port Status - " +"COMPLETED");  long number = Long.parseLong(vars.ge . . . '' : Typed variable declaration : Method Invocation Long.parseLong 
+2017/09/04 17:13:44 ERROR - jmeter.util.BeanShellInterpreter: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``import org.apache.jmeter.util.JMeterUtils;  vars.put("countervalue","0"); vars.p . . . '' : Typed variable declaration : Method Invocation Integer.parseInt 
+2017/09/04 17:13:44 WARN  - jmeter.protocol.java.sampler.BeanShellSampler: org.apache.jorphan.util.JMeterException: Error invoking bsh method: eval	Sourced file: inline evaluation of: ``import org.apache.jmeter.util.JMeterUtils;  vars.put("countervalue","0"); vars.p . . . '' : Typed variable declaration : Method Invocation Integer.parseInt 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 17:13:44 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 17:13:44 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 17:13:45 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:13:45 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:13:45 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 17:13:45 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 17:13:45 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 17:13:45 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 17:41:56 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 17:41:56 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 17:41:56 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 17:41:57 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 17:41:57 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 17:41:57 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 17:41:57 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 17:41:57 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 17:41:57 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 17:41:57 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 17:41:57 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:41:57 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 17:41:57 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:41:57 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:41:59 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/04 17:42:00 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:42:00 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/04 17:42:10 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003383 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 17:42:20 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:42:20 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 17:42:21 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 17:42:21 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:42:21 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:42:21 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 17:42:21 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 17:42:21 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 17:42:21 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 17:44:24 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 17:44:24 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 17:44:24 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 17:44:25 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 17:44:25 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 17:44:25 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 17:44:25 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 17:44:25 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 17:44:25 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 17:44:25 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 17:44:25 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:25 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 17:44:25 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:25 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:44:27 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/04 17:44:28 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:44:28 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/04 17:44:38 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003384 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 17:44:48 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:44:48 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 17:44:48 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 17:44:48 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 17:44:48 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 17:44:48 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 17:54:59 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 17:54:59 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 17:54:59 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 17:54:59 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 17:54:59 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 17:54:59 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 17:54:59 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 17:54:59 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 17:54:59 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 17:54:59 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 17:54:59 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:54:59 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 17:54:59 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:54:59 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 17:55:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:55:02 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 17:55:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:55:02 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 17:55:03 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 17:55:03 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 17:55:03 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/04 17:55:03 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:55:03 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/04 17:55:13 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 17:55:23 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/04 17:55:23 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/04 17:55:23 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003385 
+2017/09/04 17:55:23 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:55:24 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor - PortResponce, message:Expected to find an object with property ['response_url'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/04 17:55:24 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/04 17:55:24 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 17:55:24 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is -  
+2017/09/04 17:55:34 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/04 17:55:43 INFO  - jmeter.gui.action.Start: Stopping test 
+2017/09/04 17:55:43 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - Production 1-1 
+2017/09/04 17:55:43 WARN  - jmeter.threads.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended. 
+2017/09/04 17:55:43 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/04 17:55:43 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/04 17:55:43 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 17:55:43 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 17:55:44 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 18:01:10 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 18:01:10 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 18:01:10 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 18:01:10 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 18:01:10 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 18:01:10 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 18:01:10 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 18:01:10 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 18:01:10 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 18:01:10 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 18:01:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:11 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 18:01:11 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:11 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:01:13 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/04 18:01:23 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 18:01:34 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/04 18:01:34 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/04 18:01:34 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003386 
+2017/09/04 18:01:34 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:01:34 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:01:34 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/04 18:01:44 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 18:01:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:54 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 18:01:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:54 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 18:01:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:54 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 18:01:55 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 18:01:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:55 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 18:01:55 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 18:01:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:01:55 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 18:01:55 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 18:01:55 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 18:01:55 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 18:01:55 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/04 18:35:31 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/04 18:35:31 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/04 18:35:31 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/04 18:35:31 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/04 18:35:31 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/04 18:35:31 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/04 18:35:31 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/04 18:35:31 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/04 18:35:31 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/04 18:35:31 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/04 18:35:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:35:32 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/04 18:35:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:35:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/04 18:35:34 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/04 18:35:35 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:35:35 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/04 18:35:45 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 18:36:05 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is - INPROGRESS 
+2017/09/04 18:36:15 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/04 18:36:15 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/04 18:36:15 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003395 
+2017/09/04 18:36:15 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:36:16 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:36:16 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/04 18:36:26 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003395 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/04 18:36:36 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-04 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/04 18:36:36 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/04 18:36:36 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/04 18:36:36 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/04 18:36:36 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/04 18:36:36 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/05 11:03:35 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/05 11:03:35 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/05 11:03:35 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/05 11:03:35 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/05 11:03:35 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/05 11:03:35 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/05 11:03:35 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/05 11:03:35 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/05 11:03:35 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/05 11:03:35 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/05 11:03:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:03:36 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/05 11:03:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:03:36 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/05 11:03:38 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/05 11:03:39 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:03:39 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/05 11:03:39 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_05Sep2017_01 
+2017/09/05 11:03:39 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 11:03:39 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/05 11:03:49 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/05 11:03:59 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/05 11:03:59 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/05 11:03:59 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003396 
+2017/09/05 11:03:59 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 11:04:00 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 11:04:00 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/05 11:04:10 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003396 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_05Sep2017_01 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/05 11:04:20 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-05 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 11:04:20 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 11:04:20 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/05 11:04:20 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/05 11:04:20 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/05 11:04:20 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/05 12:16:25 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/05 12:16:25 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/05 12:16:25 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/05 12:16:25 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/05 12:16:25 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/05 12:16:25 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/05 12:16:25 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/05 12:16:25 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/05 12:16:25 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/05 12:16:25 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/05 12:16:25 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:25 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/05 12:16:25 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:25 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/05 12:16:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/05 12:16:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the location 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Location Name :  
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/05 12:16:28 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-05 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:16:28 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:16:29 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/05 12:16:29 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/05 12:16:29 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/05 12:16:29 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/05 12:21:18 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/05 12:21:18 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/05 12:21:18 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/05 12:21:18 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/05 12:21:18 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/05 12:21:18 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/05 12:21:18 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/05 12:21:18 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/05 12:21:18 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/05 12:21:18 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/05 12:21:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:21:18 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/05 12:21:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:21:18 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/05 12:21:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:21:20 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/05 12:21:20 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:21:20 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_05Sep2017_01 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:21:21 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/05 12:21:31 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/05 12:21:41 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/05 12:21:41 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/05 12:21:41 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003403 
+2017/09/05 12:21:41 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:21:42 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:21:42 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/05 12:21:52 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003403 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_05Sep2017_01 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/05 12:22:02 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-05 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:22:02 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:22:02 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/05 12:22:02 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/05 12:22:02 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/05 12:22:03 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/05 12:45:11 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/05 12:45:11 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/05 12:45:11 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/05 12:45:11 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/05 12:45:11 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/05 12:45:11 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/05 12:45:11 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/05 12:45:11 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/05 12:45:11 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/05 12:45:11 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/05 12:45:12 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:12 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/05 12:45:12 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:12 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/05 12:45:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_05Sep2017_01 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:45:17 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/05 12:45:27 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/05 12:45:37 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/05 12:45:37 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/05 12:45:37 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003404 
+2017/09/05 12:45:37 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:45:38 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:45:38 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/05 12:45:48 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003404 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_05Sep2017_01 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/05 12:45:58 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-05 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:45:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:45:58 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/05 12:45:58 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/05 12:45:58 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/05 12:45:58 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/05 12:46:40 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/05 12:46:40 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/05 12:46:40 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/05 12:46:40 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/05 12:46:40 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/05 12:46:40 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/05 12:46:40 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/05 12:46:40 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/05 12:46:40 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/05 12:46:40 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/05 12:46:40 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:40 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/05 12:46:40 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:40 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the location 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Location Name :  
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:42 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/05 12:46:43 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-05 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 12:46:43 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/05 12:46:44 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/05 12:46:44 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/05 12:46:44 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/05 12:46:44 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/05 13:47:00 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/05 13:47:00 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/05 13:47:00 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/05 13:47:00 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/05 13:47:00 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/05 13:47:00 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/05 13:47:00 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/05 13:47:01 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/05 13:47:01 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/05 13:47:01 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/05 13:47:03 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 13:47:03 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/05 13:47:03 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 13:47:03 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/05 13:47:19 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 13:47:19 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/05 13:47:24 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 13:47:24 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/05 13:47:27 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/05 13:47:27 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/05 13:47:27 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/05 13:47:31 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor - PortResponce, message:No results for path: $['response_url'] 
+2017/09/05 13:47:31 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/05 13:47:31 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/05 13:47:31 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/05 13:47:31 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/05 13:47:31 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/05 13:47:41 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/05 13:47:51 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/05 13:47:51 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/05 13:47:53 INFO  - jmeter.gui.action.Start: Stopping test 
+2017/09/05 13:47:53 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - Production 1-1 
+2017/09/05 13:47:53 WARN  - jmeter.threads.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended. 
+2017/09/05 13:47:53 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is -  
+2017/09/05 13:47:53 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/05 13:47:53 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/05 13:47:54 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 17:57:52 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 17:57:52 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 17:57:52 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 17:57:52 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 17:57:52 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 17:57:52 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 17:57:52 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 17:57:52 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 17:57:52 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 17:57:52 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 17:57:52 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:52 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 17:57:52 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:52 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 17:57:53 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:53 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the location 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_EC1V-9PE_CRANWOOD STREET_5_B_COMMS 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 17:57:54 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 17:57:54 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 17:57:54 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 2 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Failed 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 17:57:54 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 17:57:55 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 17:57:55 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 17:57:55 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 17:57:55 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:06:50 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:06:50 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:06:50 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:06:50 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 18:06:50 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 18:06:50 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:06:50 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:06:50 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:06:50 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:06:50 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 18:06:50 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:06:50 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:06:50 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:06:50 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:06:53 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/06 18:06:54 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:06:54 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:06:54 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:06:54 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:06:54 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:07:04 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:07:24 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is - INPROGRESS 
+2017/09/06 18:07:34 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:07:34 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:07:34 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003430 
+2017/09/06 18:07:34 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:07:35 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:07:35 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:07:45 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003430 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:07:55 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:07:56 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:07:56 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:07:56 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/06 18:07:56 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:07:56 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:07:56 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:07:56 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 18:07:56 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 18:07:56 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:07:56 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:15:22 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:15:22 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:15:22 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:15:22 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 18:15:22 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 18:15:22 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:15:22 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:15:22 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:15:22 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:15:22 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 18:15:22 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:15:22 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:15:22 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:15:22 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:15:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:15:23 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:15:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:15:23 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:15:24 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:15:34 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:15:44 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:15:44 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:15:44 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80020427 
+2017/09/06 18:15:44 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:15:44 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:15:44 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:15:54 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80020427 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:16:04 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:16:05 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:16:05 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 18:16:05 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 2 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Failed 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:16:05 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:16:06 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 18:16:06 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 18:16:06 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:16:06 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:18:30 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:18:30 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:18:30 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:18:30 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 18:18:30 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 18:18:30 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:18:30 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:18:30 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:18:30 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:18:30 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 18:18:30 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:18:30 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:18:30 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:18:30 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:18:31 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:18:31 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_EC1V-9PE_CRANWOOD STREET_5_B_COMMS 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:18:32 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:18:42 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:18:52 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:18:52 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:18:52 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80020428 
+2017/09/06 18:18:52 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:18:52 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:18:52 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:19:02 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80020428 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:19:13 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:19:13 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 18:19:13 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 2 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:13 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:19:34 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 18:19:34 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 18:19:34 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:19:34 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:19:41 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:19:41 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:19:41 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:19:41 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 18:19:41 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 18:19:41 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:19:41 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:19:41 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:19:41 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:19:41 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 18:19:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:42 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:19:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:19:43 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:43 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:19:44 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:19:54 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:20:14 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is - INPROGRESS 
+2017/09/06 18:20:24 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:20:24 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:20:24 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003431 
+2017/09/06 18:20:24 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:20:25 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:20:25 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:20:35 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003431 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:20:45 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:20:46 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:20:46 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:20:46 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/06 18:20:46 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:20:46 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:20:46 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:20:46 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 18:20:46 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 18:20:46 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:20:46 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:26:48 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:26:48 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:26:48 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:26:48 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 18:26:48 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 18:26:48 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:26:48 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:26:48 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:26:48 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:26:48 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 18:26:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:26:48 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:26:48 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:26:48 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:26:50 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:26:50 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:26:51 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:27:01 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:27:11 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:27:11 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:27:11 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003432 
+2017/09/06 18:27:11 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:27:12 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:27:12 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:27:22 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003432 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:27:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:27:33 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:27:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:27:33 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/06 18:27:33 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:27:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:27:33 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:27:33 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 18:27:33 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 18:27:33 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:27:33 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:28:39 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:28:39 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:28:39 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:28:39 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Production 
+2017/09/06 18:28:39 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Production. 
+2017/09/06 18:28:39 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:28:39 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:28:39 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:28:39 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:28:39 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Production 1-1 
+2017/09/06 18:28:40 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:28:40 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:28:40 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:28:40 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:28:42 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:28:52 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:29:02 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:29:02 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:29:02 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003433 
+2017/09/06 18:29:02 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:29:03 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:29:03 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:29:13 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003433 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:23 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:29:24 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:29:24 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:24 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/06 18:29:24 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:29:24 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:24 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:29:24 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Production 1-1 
+2017/09/06 18:29:24 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Production 1-1 
+2017/09/06 18:29:24 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:29:24 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:29:57 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:29:57 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:29:57 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:29:57 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check -QA Health Check 
+2017/09/06 18:29:57 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check -QA Health Check. 
+2017/09/06 18:29:57 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:29:57 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:29:57 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:29:57 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:29:57 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check -QA Health Check 1-1 
+2017/09/06 18:29:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:58 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:29:58 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:29:58 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:30:00 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_E14-9YY_EAST INDIA DOCK ROAD_240_G_MMR2 
+2017/09/06 18:30:01 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:01 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:30:01 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:30:01 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:30:01 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:30:11 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:30:21 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:30:21 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:30:21 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003434 
+2017/09/06 18:30:21 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:30:22 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:30:22 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:30:32 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80003434 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:42 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:30:43 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:30:43 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:43 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 0 
+2017/09/06 18:30:43 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:30:43 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:30:43 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:30:43 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check -QA Health Check 1-1 
+2017/09/06 18:30:43 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check -QA Health Check 1-1 
+2017/09/06 18:30:43 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:30:43 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:31:11 INFO  - jmeter.services.FileServer: Set new base='\\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod' 
+2017/09/06 18:32:11 INFO  - jmeter.services.FileServer: Set new base='\\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod' 
+2017/09/06 18:32:35 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:32:35 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:32:35 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:32:35 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - Internal Demo Health Check 
+2017/09/06 18:32:35 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - Internal Demo Health Check. 
+2017/09/06 18:32:35 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:32:35 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:32:35 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:32:35 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:32:35 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - Internal Demo Health Check 1-1 
+2017/09/06 18:32:35 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:32:35 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:32:35 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:32:35 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:32:36 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:32:36 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_EC1V-9PE_CRANWOOD STREET_5_B_COMMS 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: Successfully created a Port 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:32:37 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is - REQUESTED 
+2017/09/06 18:32:47 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:32:57 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:32:57 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:32:57 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80020429 
+2017/09/06 18:32:57 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:32:58 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:32:58 INFO  - jmeter.util.BeanShellTestElement: Delete Port Status is - REQUESTED 
+2017/09/06 18:33:08 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is - REQUESTED 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Final Port Status is - COMPLETED 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Port Count - null 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Port_ID_null : 80020429 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Successfully deleted a Port 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Port Name : SDPort_06Sep2017_01 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Admin Portal 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Customers 
+2017/09/06 18:33:18 INFO  - jmeter.extractor.BSFPostProcessor: 2017-09-06 
+2017/09/06 18:33:18 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 18:33:18 INFO  - jmeter.extractor.BSFPostProcessor: ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Size of Requests Array - : 2 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107854||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : My italian port||REQUESTED AT : 2017-09-06T16:55:06+0000 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: ----------ID : 107852||STATUS : FAILED||ACTION : CREATE||RESOURCE : PORT||NAME : capacity port||REQUESTED AT : 2017-09-06T16:55:04+0000 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Requests 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:33:18 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged Out 
+2017/09/06 18:33:19 INFO  - jmeter.threads.JMeterThread: Thread is done: Portal_Check - Internal Demo Health Check 1-1 
+2017/09/06 18:33:19 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - Internal Demo Health Check 1-1 
+2017/09/06 18:33:19 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:33:19 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:35:44 INFO  - jmeter.services.FileServer: Set new base='\\ULVMCTMFIL109\DESKTOP109A\kreddy6\Downloads\RestAPI_TestPlan\ProdHealthCheck\Prod' 
+2017/09/06 18:39:53 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:39:53 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:39:53 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:39:53 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - External Demo Health Check 
+2017/09/06 18:39:53 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - External Demo Health Check. 
+2017/09/06 18:39:53 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:39:53 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:39:53 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:39:53 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:39:53 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 18:39:53 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:39:53 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:39:53 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:39:53 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:39:55 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:39:55 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:39:56 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:39:56 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:39:56 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:39:56 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:39:56 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_W1J-5BQ_CHESTERFIELD GARDENS_6_2_COMMS 
+2017/09/06 18:39:56 INFO  - jmeter.protocol.http.sampler.LazySchemeSocketFactory: Setting up HTTPS TrustAll Socket Factory 
+2017/09/06 18:39:56 INFO  - jmeter.util.JsseSSLManager: Using default SSL protocol: TLS 
+2017/09/06 18:39:56 INFO  - jmeter.util.JsseSSLManager: SSL session context: per-thread 
+2017/09/06 18:39:56 INFO  - jmeter.util.SSLManager: JmeterKeyStore Location:  type JKS 
+2017/09/06 18:39:56 INFO  - jmeter.util.SSLManager: KeyStore created OK 
+2017/09/06 18:39:56 WARN  - jmeter.util.SSLManager: Keystore file not found, loading empty keystore 
+2017/09/06 18:39:57 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:39:57 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 18:39:57 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 18:39:57 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:39:57 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/06 18:40:07 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/06 18:40:18 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:40:18 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:40:28 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is -  
+2017/09/06 18:40:36 INFO  - jmeter.gui.action.Start: Stopping test 
+2017/09/06 18:40:36 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 18:40:36 WARN  - jmeter.threads.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended. 
+2017/09/06 18:40:37 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:40:37 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:40:37 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 18:40:37 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:40:37 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 18:55:54 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 18:55:54 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 18:55:54 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 18:55:54 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - External Demo Health Check 
+2017/09/06 18:55:54 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - External Demo Health Check. 
+2017/09/06 18:55:54 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 18:55:54 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 18:55:54 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 18:55:54 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 18:55:54 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 18:55:56 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:55:56 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 18:55:56 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:55:56 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 18:56:00 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:56:00 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 18:56:01 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:56:01 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 18:56:01 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 18:56:01 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 18:56:01 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_W1J-5BQ_CHESTERFIELD GARDENS_6_2_COMMS 
+2017/09/06 18:56:02 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor - PortResponce, message:No results for path: $['response_url'] 
+2017/09/06 18:56:02 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:56:02 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 18:56:02 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 18:56:02 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 18:56:02 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/06 18:56:12 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/06 18:56:12 INFO  - jmeter.gui.action.Start: Shutting test down 
+2017/09/06 18:56:12 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 18:56:22 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:56:22 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 18:56:22 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 18:56:22 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 18:56:22 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 19:01:33 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 19:01:33 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 19:01:33 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 19:01:33 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - External Demo Health Check 
+2017/09/06 19:01:33 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - External Demo Health Check. 
+2017/09/06 19:01:33 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 19:01:33 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 19:01:33 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 19:01:33 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 19:01:33 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:01:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:01:33 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 19:01:33 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:01:33 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 19:01:34 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:01:34 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_COLT_HOUSE_DCNET_01 
+2017/09/06 19:01:35 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor - PortResponce, message:No results for path: $['response_url'] 
+2017/09/06 19:01:35 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 19:01:35 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/06 19:01:45 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/06 19:01:55 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:01:55 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:02:05 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is -  
+2017/09/06 19:02:15 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:02:15 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:02:16 INFO  - jmeter.gui.action.Start: Stopping test 
+2017/09/06 19:02:16 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:02:16 WARN  - jmeter.threads.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended. 
+2017/09/06 19:02:16 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 2 and the Port status is -  
+2017/09/06 19:02:16 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:02:16 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 19:02:16 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 19:09:30 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 19:09:30 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 19:09:31 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 19:09:31 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - External Demo Health Check 
+2017/09/06 19:09:31 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - External Demo Health Check. 
+2017/09/06 19:09:31 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 19:09:31 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 19:09:31 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 19:09:31 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 19:09:31 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:09:31 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:09:31 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 19:09:31 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:09:31 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 19:09:32 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_COLT_HOUSE_DCNET_01 
+2017/09/06 19:09:34 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:09:34 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 19:09:34 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 19:09:34 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 19:09:34 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/06 19:09:44 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/06 19:09:55 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:09:55 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:10:05 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is -  
+2017/09/06 19:10:16 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:10:16 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:10:26 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 2 and the Port status is -  
+2017/09/06 19:10:37 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:10:37 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:10:47 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 3 and the Port status is -  
+2017/09/06 19:10:58 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:10:58 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:11:08 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 4 and the Port status is -  
+2017/09/06 19:11:19 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:11:19 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:11:29 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 5 and the Port status is -  
+2017/09/06 19:11:40 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:11:40 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:11:48 INFO  - jmeter.gui.action.Start: Shutting test down 
+2017/09/06 19:11:48 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:11:50 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 6 and the Port status is -  
+2017/09/06 19:11:50 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:11:50 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 19:11:50 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 19:17:14 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 19:17:14 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 19:17:15 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 19:17:15 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - External Demo Health Check 
+2017/09/06 19:17:15 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - External Demo Health Check. 
+2017/09/06 19:17:15 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 19:17:15 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 19:17:15 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 19:17:15 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 19:17:15 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:17:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:17:15 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 19:17:15 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:17:15 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 19:17:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:17:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 19:17:16 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:17:16 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 19:17:17 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:17:17 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 19:17:17 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_COLT_HOUSE_DCNET_01 
+2017/09/06 19:17:18 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:17:18 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 19:17:18 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 19:17:18 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 19:17:18 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/06 19:17:28 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/06 19:17:39 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:17:39 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:17:49 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is -  
+2017/09/06 19:17:52 INFO  - jmeter.gui.action.Start: Stopping test 
+2017/09/06 19:17:52 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:17:52 WARN  - jmeter.threads.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended. 
+2017/09/06 19:17:53 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:17:53 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:17:53 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:17:53 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 19:17:53 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 
+2017/09/06 19:20:03 INFO  - jmeter.engine.StandardJMeterEngine: Running the test! 
+2017/09/06 19:20:03 INFO  - jmeter.samplers.SampleEvent: List of sample_variables: [] 
+2017/09/06 19:20:03 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(true,*local*) 
+2017/09/06 19:20:03 INFO  - jmeter.engine.StandardJMeterEngine: Starting ThreadGroup: 1 : Portal_Check - External Demo Health Check 
+2017/09/06 19:20:03 INFO  - jmeter.engine.StandardJMeterEngine: Starting 1 threads for group Portal_Check - External Demo Health Check. 
+2017/09/06 19:20:03 INFO  - jmeter.engine.StandardJMeterEngine: Thread will continue on error 
+2017/09/06 19:20:03 INFO  - jmeter.threads.ThreadGroup: Starting thread group number 1 threads 1 ramp-up 1 perThread 1000.0 delayedStart=false 
+2017/09/06 19:20:03 INFO  - jmeter.threads.ThreadGroup: Started thread group number 1 
+2017/09/06 19:20:03 INFO  - jmeter.engine.StandardJMeterEngine: All thread groups have been started 
+2017/09/06 19:20:03 INFO  - jmeter.threads.JMeterThread: Thread started: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:20:04 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:20:04 INFO  - jmeter.util.BeanShellTestElement: Successfully Logged into Customer application 
+2017/09/06 19:20:04 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:20:04 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Users 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Global Directory 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the Ports 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : true 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: Successfully captured the locations 
+2017/09/06 19:20:05 INFO  - jmeter.util.BeanShellTestElement: Location Name : UK_COLT_HOUSE_DCNET_01 
+2017/09/06 19:20:06 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:20:06 INFO  - jmeter.util.BeanShellTestElement: BeanShell Sampler Status : false 
+2017/09/06 19:20:06 INFO  - jmeter.util.BeanShellTestElement: Execution Status -Passed 
+2017/09/06 19:20:06 INFO  - jmeter.util.BeanShellTestElement: ********************************************************************************************************************************************************************* 
+2017/09/06 19:20:06 INFO  - jmeter.util.BeanShellTestElement: Initial Port Status is -  
+2017/09/06 19:20:16 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 0 and the Port status is -  
+2017/09/06 19:20:27 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['status'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:20:27 ERROR - jmeter.extractor.json.jsonpath.JSONPostProcessor: Error processing JSON content in JSON Path PostProcessor, message:Expected to find an object with property ['port_id'] in path $ but found 'java.lang.String'. This is not a json object according to the JsonProvider: 'com.jayway.jsonpath.spi.json.JsonSmartJsonProvider'. 
+2017/09/06 19:20:33 INFO  - jmeter.gui.action.Start: Stopping test 
+2017/09/06 19:20:33 INFO  - jmeter.threads.JMeterThread: Stopping: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:20:33 WARN  - jmeter.threads.JMeterThread: The delay timer was interrupted - probably did not wait as long as intended. 
+2017/09/06 19:20:33 INFO  - jmeter.util.BeanShellTestElement: Loop counter is - 1 and the Port status is -  
+2017/09/06 19:20:33 INFO  - jmeter.threads.JMeterThread: Thread finished: Portal_Check - External Demo Health Check 1-1 
+2017/09/06 19:20:33 INFO  - jmeter.engine.StandardJMeterEngine: Notifying test listeners of end of test 
+2017/09/06 19:20:33 INFO  - jmeter.gui.util.JMeterMenuBar: setRunning(false,*local*) 

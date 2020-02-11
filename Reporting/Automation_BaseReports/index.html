@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Dashboard Reports</title>
+	
+	<!--link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" /-->
+	<!--link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" /-->
+	
+	<!--image src="TestCaseDetailReports\Logos\ClientLogo.bmp" align="center"-->
+	<link href="Bootstrap/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="Bootstrap/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+	<link href="Bootstrap/dist/css/sb-admin-2.css" rel="stylesheet">
+	<link href="Bootstrap/vendor/morrisjs/morris.css" rel="stylesheet">
+	<link href="Bootstrap/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="src/jquery.jqplot.css" />
+	<link href="Scripts/Themes/redmond/jquery-ui-1.8.2.custom.css" rel="stylesheet" />
+	<!--script src="Scripts/JSONData.js"></script-->
+	<!--script src="Releases/CurrentRelease.js"></script-->
+	<script src="Releases/ExecutionDetails.js"></script>
+	<script src="Bootstrap/canvasjs.min.js"></script>
+
+	<link href="Highchart/CustomisedStyleSheet.css" rel="stylesheet">	
+	<!--script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script-->
+
+	<!--<script src="Highchart/jquery-3.1.1.min.js"></script>-->
+	<script src="Highchart/highcharts.js"></script>
+	<script src="Highchart/highcharts-3d.js"></script>
+	<script src="https://code.highcharts.com/modules/series-label.js"></script>
+	<script src="Highchart/exporting.js"></script>
+	
+	
+	<script src="Bootstrap/vendor/jquery/jquery.min.js"></script>
+	<script src="Scripts/jqgrid/jquery.jqGrid.min.js"></script>
+	<script src="Scripts/jqgrid/i18n/grid.locale-en.js"></script>
+    <script src="Bootstrap/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="Bootstrap/vendor/raphael/raphael.min.js"></script>
+    <script src="Bootstrap/vendor/morrisjs/morris.min.js"></script>
+		
+	
+	<style>
+		.btn-group,row {
+			color: red;				
+			width: 97.5%;
+			float: none;
+			margin: 5px auto;
+			display: block;
+		}
+		.row{
+			margin-left: 0.5%;
+			margin-right: 0.5%;
+		}
+		.col-lg-2.col-md-6.dashboard-summary {
+			margin-right: 0;
+		}
+		
+		.wheel-icon {
+			padding-left: 0;
+		}
+		
+		.ui-widget-overlay {
+			background: none;
+		}
+		
+		.ui-jqgrid-htable {
+			margin: 0 auto;
+		}
+		
+		.jqgfirstrow {
+			display: none;
+		}
+		
+		.ui-jqgrid-sortable {
+			text-align: center;
+		}
+		.ui-grid-ico-sort{
+			display: none
+			}
+			
+		.ui-jqgrid-resize.ui-jqgrid-resize-ltr {
+			display: none;
+		}
+		
+		/*
+		.ui-row-ltr td {
+			border-right: 1px solid #51a8d6;
+		}*/
+		
+		/*
+		.highcharts-background{
+			fill:#d7edff
+		}
+		*/
+		.panel{
+			background-color:#d7edff
+		}
+		
+		.dateCol{
+			width: 171px;
+		}
+		
+		.tdCol{
+			width: 85px;
+		}
+		.well{
+			display: none
+		}
+		
+		.custom-container {
+		  width: 100%
+		}
+		@media only screen and (min-width: 1200px) {
+			.col-lg-2.col-md-6.dashboard-summary {
+				margin-right: 4.15%;
+			}
+		}
+		#lui_chartHistory{
+		display:none !important; }
+		#passed{
+		color: #fff;
+		}
+		#failed{
+		color: #fff;
+		}
+		#inprogress{
+		color: #fff;
+		}
+		
+	</style>
+		
+
+</head>
+
+<body background="Logos/pexels-photo-207962.jpeg">
+
+
+		<div class="row" >
+			<table style="width:100%">
+				<tr>
+					<td style="width:2%"></td>
+					<td style="width:48%">
+						<span id="txt" align="left"  size="50" color="black"></span>
+					</td>
+					<td style="width:50%" align="right"></td>				
+				</tr>			
+			</table>
+		</div>
+		<div class="row">
+			<div class="col-lg-12 col-md-12">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div class="panel-heading" align="center">
+							<font size="5">DASHBOARD</font>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="btn-group btn-group-justified">
+					  <a href="Index.html" class="btn btn-primary">Reset</a>
+					  <a href="Index.html" class="btn btn-primary">Dashboard</a>
+					  <a href="ExecutionSummary.html" class="btn btn-primary" id = "IdExecutionSummary">Summary Report</a>
+					  <!--a class="btn btn-primary" id = "IdExecutionSummary" onload="ExecutionSummaryLoaded()">Summary Report</a-->
+					  <a href="#" class="btn btn-primary">System Wise Report</a>
+					  <a href="javascript:history.go(0)" class="btn btn-primary">Refresh</a>
+					  <a onClick="window.print()" class="btn btn-primary">Print</a>
+					</div>
+	
+				</div>
+			</div>
+		</div>
+		
+		
+	
+	<!--div id="txt" align="right" style="background:#81BEF7" size="25" color="black"></div-->		
+	
+	<!--div class="row">
+		<table style="width:100%">				
+			<tr>
+				<td style="width:60%" height="50">
+					<table style="width:100%">			
+						<tr>
+							<td style="width:10%"  height="50"></td>
+							<td style="width:90%" height="50">
+								<span id="txt" align="left"  size="50" color="black"></span>
+							</td>
+						</tr>					
+					</table>
+				</td>
+				<td style="width:40%"  height="50">
+					<table style="width:100%" >			
+						<tr>
+							<td style="width:10%" align="right" height="50">
+								<label >Release:</label>
+							</td>
+							<td style="width:20%" align="Center" height="50">								
+								<select style="height:30px">
+								  <option value="volvo">Please Select</option>
+								  <option value="volvo">Release 4.7</option>
+								  <option value="volvo">Release 4.8</option>
+								  <option value="volvo">Release 4.9</option>
+								  <option value="volvo">Release 5.0</option>					  
+								</select>
+							</td>
+							<td style="width:20%" align="Center" height="50">
+								<label >Execution Date:</label>
+							</td>
+							<td style="width:20%" align="Center" height="50">								
+								<select style="height:30px">
+								  <option value="volvo">Please Select</option>
+								  <option value="volvo">19 Feb 2016 10.30 AM</option>
+								  <option value="volvo">19 Feb 2016 11.30 AM</option>
+								  <option value="volvo">19 Feb 2016 12.30 AM</option>
+								  <option value="volvo">19 Feb 2016 13.30 AM</option>					  
+								</select>
+							</td>
+							<td style="width:10%" align="Center" height="50">
+								<label >Run:</label>
+							</td>
+							<td style="width:20%" align="left" height="50">								
+								<select style="height:30px">
+								  <option value="volvo">Please Select</option>
+								  <option value="volvo">Run 1</option>
+								  <option value="volvo">Run 2</option>					  					  
+								</select>
+							</td>
+							
+						</tr>					
+					</table>
+				</td>
+				
+			</tr>
+					
+		</table>
+	</div-->
+		
+	
+
+
+		<div class="row">
+			<div class="col-lg-6 col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<div align="center">
+							<font size="3">SYSTEM DETAILS</font>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+					<div class="panel-footer">
+						<table border="0" width="100%">
+							<tr>
+								<td width="40%" align="left">
+									<div>
+										<font size="3">Executed By :</font>
+									</div>
+								</td>
+								<!--td width="60%" align = "left"><div><font size="3" >Kreddy</font></div></td-->
+								<td width="60%" align="left">
+									<div><span id="ExecutedBy"><font size="3" >NULL</font></div></td>
+								</tr>
+								<tr>
+									<td width="40%" align = "left"><div><font size="3" >Project Name :</font></div></td>
+									<td width="60%" align = "left"><div><span id="ProjectName"><font size="3" >NULL</font></div></td>	
+								</tr>
+								<tr>
+									<td width="40%" align = "left"><div><font size="3" >Environment :</font></div></td>
+									<!--td width="60%" align = "left"><div><font size="3" >Live</font></div></td-->		
+									<td width="60%" align = "left"><div><span id="TargettedEnvironment"><font size="3" >NULL</font></div></td>										
+								</tr>
+								<tr> 
+									<td width="40%" align = "left"><div><font size="3" >Browser :</font></div></td>
+									<!--td width="60%" align = "left"><div><font size="3" >Chrome</font></div></td-->
+									<td width="60%" align = "left"><div><span id="BrowserType"><font size="3" >NULL</font></div></td>
+								</tr>
+								<tr> 
+									<td width="40%" align = "left"><div><font size="3" >Release :</font></div></td>
+									<!--td width="60%" align = "left"><div><font size="3" >Chrome</font></div></td-->
+									<td width="60%" align = "left"><div><span id="Release"><font size="3" >NULL</font></div></td>
+								</tr>
+							</table>
+						</div> 
+					</div>
+				</div>
+			
+			 <div class="col-lg-6 col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">  
+						<div align = "center"><font size="3">EXECUTION DETAILS</font></div>
+						<div class="clearfix"></div>
+					</div>
+					 <div class="panel-footer">                            							
+						<table border="0" width="100%">
+							<tr>
+								<td width="40%" align = "left"><div><font size="3" >Run :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:09 IST 2015</font></div></td-->
+								<td width="60%" align = "left"><div><span id="Run"><font size="3" >NULL</font></div></td>
+								
+							</tr>
+							<tr>
+								<td width="40%" align = "left"><div><font size="3" >Execution Date :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:09 IST 2015</font></div></td-->
+								<td width="60%" align = "left"><div><span id="SystemDate"><font size="3" >NULL</font></div></td>
+								
+							</tr>
+							<tr>
+								<td width="40%" align = "left"><div><font size="3" >Execution Started :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:08 IST 2015</font></div></td-->	
+								<td width="60%" align = "left"><div><span id="RunStarted"><font size="3" >NULL</font></div></td>									
+							</tr>
+							<tr> 
+								<td width="40%" align = "left"><div><font size="3" >Execution Ended :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >Mon Aug 10 23:13:47 IST 2015</font></div></td-->
+								<td width="60%" align = "left"><div><span id="RunEnded"><font size="3" >NULL</font></div></td>
+							</tr>
+							<tr> 
+								<td width="40%" align = "left"><div><font size="3" >Execution Time :</font></div></td>
+								<!--td width="60%" align = "left"><div><font size="3" >0 : 0 : 38</font></div></td-->
+								<td width="60%" align = "left"><div><span id="TotalExecutionTime"><font size="3" >NULL</font></div></td>
+							</tr>
+						</table>
+					</div>                  
+				</div>
+			</div>				
+		</div>	
+		
+	<!--div class="row" style="width:99%" >				
+		<div class="col-lg-12 col-md-12">					
+			<div class="panel panel-primary">				
+				<div class="panel-heading">
+					<div class="panel-heading" align="center">
+						<font size="5">DASHBOARD</font>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div-->
+
+	<div class="row" style="width:99%">
+		<div class="col-lg-2 col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3 wheel-icon">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div id="targetted" class="huge">0</div>
+							<div>Total Test Scripts:</div>
+							<div>TARGETTED</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-lg-2 col-md-6">
+			<div class="panel panel-primary" >
+				<div class="panel-heading" style="background-color:#33b2b7">
+					<div class="row">
+						<div class="col-xs-3 wheel-icon">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div id="executed" class="huge">0</div>
+							<div>Total Test Scripts:</div>
+							<div>EXECUTED</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="col-lg-2 col-md-6">
+			<div class="panel panel-green">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3 wheel-icon">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<a id = "statusPassed" href="http://example.com">
+								<div id="passed" class="huge">0</div>
+							</a>
+							<div>Total Test Scripts:</div>
+							<div>PASSED</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		
+	
+		<div class="col-lg-2 col-md-6">
+			<div class="panel panel-red">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3 wheel-icon">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<a id = "statusFailed" href="http://example.com">
+								<div id="failed" class="huge">0</div>
+							</a>							
+							
+							<div>Total Test Scripts:</div>
+							<div>FAILED</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-2 col-md-6">
+			<div class="panel panel-red">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3 wheel-icon">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div id="skipped" class="huge">0</div>
+							<div>Total Test Scripts:</div>
+							<div>SKIPPED</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-2 col-md-6">
+			<div class="panel panel-yellow">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3 wheel-icon">
+							<i class="fa fa-support fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<a id = "statusInProgressed" href="http://example.com">
+								<div id="inprogress" class="huge">0</div>
+							</a>
+							<div>Total Test Scripts:</div>
+							<div>In-Progress</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel-footer">
+					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+					
+	</div>
+	<!--div class = "row" style="width:99%">
+		<div class="col-lg-3">
+			<div class="panel panel-primary" >
+				<div class="panel-heading" style="background-color:#d7edff">
+					<div class="row">
+						<div id="chartContainer"align="center" style="height: 415px; width: 90%;"></div>						
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="col-lg-3">
+			<div class="panel panel-primary" >
+				<div class="panel-heading" style="background-color:#d7edff">
+					<div class="row">						
+						<div id="morris"align="center" style="height: 415px; width: 90%;"></div>
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+		<div class="col-lg-6">
+			<div class="panel panel-primary" >
+				<div class="panel-heading" style="background-color:#d7edff">
+					<div class="row">						
+						<table id="chartHistory" align="center" style="height: 387px;"> </table>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div-->
+	<div class="row" style="width:99%">		
+		<div class="col-lg-4">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color:#33b2b7">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Test Case Results (PASS,FAIL,IN-PROGRESS) Count
+				</div>
+				<div class="panel-body">					
+					<div id="chartContainer"align="center" style="height: 415px; width: 100%;"></div>							
+					<!--div id="morris-bar" align="center" style="height: 415px; width: 100%;"></div-->
+					<!--div id="chart3" align="center" style="height: 415px; width: 100%;"></div-->						
+				</div>
+			</div>
+		</div>
+
+		<!--div class="col-lg-6">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Test Case Results (PASS,FAIL,IN-PROGRESS)
+				</div>
+				<div class="panel-body" align="center">
+					<div id="chartContainer" align="center" style="height: 350px; width: 75%;"></div>
+				</div>
+			</div>
+		</div-->
+		<div class="col-lg-4">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color:#33b2b7">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Test Case Results (PASS,FAIL,IN-PROGRESS) In %
+				</div>
+				<div class="panel-body">
+					<div id="morris"align="center" style="height: 415px; width: 100%;"></div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-lg-4">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color:#33b2b7">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Test Execution History
+				</div>
+				<div class="panel-body">
+					<div align="center" style="height: 415px; width: 100%;">
+						<div align="center" style="height: 100%; width: 100%;background-color: #fff;">
+						<!--div id="morris"align="center" style="height: 415px; width: 100%;"></div-->
+						<div id="LineHighChart"align="center" style="height: 415px; width: 100%;"></div>	
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+	<div class="row" style="width:99%">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color:#33b2b7">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Test Scenarios Execution Time in Seconds
+				</div>
+				<div class="panel-body">
+					<!--div class="row"-->
+						<!--div class="col-lg-12"-->
+							<div id="container" class="custom-container"></div>
+							<div id="sliders">
+								<div class="portlet-body">
+									<div id="chart_5" class="chart" style="height: 100%;width:100%"> </div>
+									<div class="well margin-top-20">
+										<div class="row">
+											<div class="col-sm-4" align="center">
+												<label class="text-left">Top Radius:</label>
+												<!--input class="chart_5_chart_input" data-property="topRadius" type="range" min="0" max="1.5" value="1" step="0.01" /-->
+												<input id="alpha" type="range" min="0" max="45" value="0" /> <span id="alpha-value" class="value"></span>
+											</div>
+											<div class="col-sm-4" align="center">
+												<label class="text-left">Angle:</label>
+												<!--input class="chart_5_chart_input" data-property="angle" type="range" min="0" max="89" value="30" step="1" /-->
+												<input id="beta" type="range" min="-45" max="45" value="0" /> <span id="beta-value" class="value"></span>
+											</div>
+											<div class="col-sm-4" align="center">
+												<label class="text-left">Depth:</label>
+												<!--input class="chart_5_chart_input" data-property="depth3D" type="range" min="1" max="120" value="40" step="1" /-->
+												<input id="depth" type="range" min="20" max="100" value="20" /> <span id="depth-value" class="value"></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--div id="morris-bar" align="center" style="height: 415px; width: 100%;"></div-->
+							<!--div id="chart3" align="center" style="height: 415px; width: 100%;"></div-->
+						<!--/div-->
+					<!--/div-->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--div class="row">
+		<div class="col-lg-12 col-md-12" align="center" style="height: 100%; width: 100%;">
+			<div class="panel panel-primary">						
+					<table id="SummaryReport" align="center" style="height: 100%; width: 99%;"> 
+						<tr width = "100%"> 									
+							<td width = "100%"> 
+								<div class="col-lg-24" align="center" width = "100%">
+									<table id="MainReport" align="center"width = "100%"> </table>
+									<div id="gridpager"></div>									 
+		
+								</div> 
+							</td>
+						</tr>								
+					</table>
+				
+			</div>	
+		</div>	
+	</div-->	
+	
+	<div class="row" style="width:99%">						
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading" style="background-color:#33b2b7">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Test Execution History
+				</div>
+				<div class="panel-body">					
+					<table id="chartHistory" align="center" style="height: 387px;"> </table>	
+					<div id="gridpager"></div>		
+				</div>
+			</div>
+		</div>					
+	</div>
+	
+	<!--div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<div id="morris-bar" align="center" style="height: 415px; width: 100%;"></div>
+							<div id="chart3" align="center" style="height: 415px; width: 100%;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div-->
+		
+	<!--
+	<script src="Bootstrap/vendor/jquery/jquery.min.js"></script>
+	<script src="Bootstrap/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="Bootstrap/vendor/metisMenu/metisMenu.min.js"></script>
+	<script src="Bootstrap/vendor/raphael/raphael.min.js"></script>
+	<script src="Bootstrap/vendor/morrisjs/morris.min.js"></script>
+	<script src="Bootstrap/data/morris-data.js"></script>
+	<script src="Bootstrap/dist/js/sb-admin-2.js"></script>-->
+	
+			
+	<script type="text/javascript">
+		
+		var head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+
+		if (document.location.href.indexOf('=') > -1) {
+			jsonCurrentReleasePath = document.location.href.split('=')[1];
+			console.log(jsonCurrentReleasePath);
+			script.src = jsonCurrentReleasePath;
+			head.appendChild(script);
+		}
+		else {
+			script.src = "Releases/CurrentRelease.js";
+			head.appendChild(script);
+		}
+		
+		var head = document.getElementsByTagName('head')[0];
+		var script = document.createElement('script');
+		script.type = 'text/javascript';
+
+		if (document.location.href.indexOf('release=') > -1) {
+			jsonCurrentReleasePath = document.location.href.split('=')[1];
+			console.log(jsonCurrentReleasePath);					
+			document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1?release="+jsonCurrentReleasePath;
+			document.getElementById("statusFailed").href = "ExecutionSummary.html?page=1?release=" + jsonCurrentReleasePath + "?status=Fail";
+			document.getElementById("statusPassed").href = "ExecutionSummary.html?page=1?release=" + jsonCurrentReleasePath + "?status=Pass";
+			//var m = document.getElementById('statusPassed');
+			//m.style.text-decoration = 'none';		
+
+			document.getElementById("statusInProgressed").href = "ExecutionSummary.html?page=1?release=" + jsonCurrentReleasePath + "?status=In Progress";
+			
+		}
+		else {
+			document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1";	
+			//document.getElementById("statusFailed").href = statusFailed();
+			document.getElementById("statusFailed").href = "ExecutionSummary.html?page=1?status=Fail";	
+			document.getElementById("statusPassed").href = "ExecutionSummary.html?page=1?status=Pass";	
+			document.getElementById("statusInProgressed").href = "ExecutionSummary.html?page=1?status=In Progress";	
+		}	
+		
+				
+		window.onload = function () {
+		
+			var countPassed = 0;
+			var countFail = 0;
+			var countInProgress = 0;
+			var totaltestcases =0;
+			var i;
+
+			var objDuration = new Array();
+			var objTestCaseId = new Array();
+			//var BarGraph = obj3;
+			//console.log (obj.length)
+			//var theFileYouAreLookingFor = getClientFileName("Scripts/Results/");
+			var BarGraphNew = [];
+			var obj = ExecutionDetails;
+			for (i = 0; i < obj.length; i++) {
+				var bgTmp = {"name" : "", "y":"","url":""};
+				bgTmp.name = obj[i].TestCaseID;
+				bgTmp.testtitle = obj[i].TestTitle;
+				bgTmp.y = (parseInt(obj[i].Duration.split(':')[0].trim())*60*60)  + (parseInt(obj[i].Duration.split(':')[1].trim())*60) + (parseInt(obj[i].Duration.split(':')[2].trim()));
+				bgTmp.url = obj[i].DetailResults;
+				BarGraphNew.push(bgTmp);			
+			}
+			var BarGraph = BarGraphNew;
+			for (i = 0; i < obj.length; i++) {
+				//console.log ("jsdsfkja")
+				objDuration[i] = obj[i].Duration;
+				objTestCaseId[i] = obj[i].TestCaseID;
+
+				/*			
+				If (i == 1)
+				{
+					BarGraph =  "{Duration:"+obj[i].Duration"=, TestCaseID:"+obj[i].TestCaseID+"}";
+				}else
+				{
+					BarGraph = BarGraph + ",{Duration:"+obj[i].Duration"=, TestCaseID:"+obj[i].TestCaseID+"}";
+				}*/
+
+
+				if (obj[i].Status == "Pass") {
+					countPassed++;
+				} else if (obj[i].Status == "Fail") {
+
+					countFail++;
+				} else {
+
+					countInProgress++;
+				}
+			}
+			totaltestcases = obj.length;
+			document.getElementById("targetted").innerHTML = obj.length;
+			document.getElementById("passed").innerHTML = countPassed;
+			document.getElementById("failed").innerHTML = countFail;
+			document.getElementById("inprogress").innerHTML = countInProgress;
+			document.getElementById("executed").innerHTML = countPassed+countFail;
+			document.getElementById("skipped").innerHTML = 0;
+			
+		
+			/*
+			var chart = new CanvasJS.Chart("chartContainer", {
+				theme: "theme2",//theme1
+
+				animationEnabled: true,   // change to true
+				dataPointWidth: 100,
+				data: [
+					{
+						// Change type to "bar", "area", "spline", "pie",etc.
+						type: "column",
+						dataPoints: [
+							{ color: "#5cb85c", label: "PASSED", y: countPassed},
+							{ color: "#d9534f", label: "FAILED", y: countFail },
+							{ color: "#f0ad4e", label: "IN-PROGRESS", y: countInProgress}
+						]
+					}
+				]
+			});
+			chart.render();
+
+		/* var chart1 = new Morris.Donut({
+				element: 'morris',
+					data: [{
+					label: "Pass",
+					color: "#5cb85c",
+					value: countPassed
+				}, {
+					label: "Fail",
+					color: "#d9534f",
+					value: countFail
+				}, {
+					label: "In Progress",
+					color: "#f0ad4e",
+					value: countInProgress
+				}],
+				resize: true
+			});*/
+
+			var obj2 = TestSuiteExecutionDetails;
+			$.each(obj2, function (k, v) {
+				RunStarted = obj2[k].RunStarted;
+				RunEnded = obj2[k].RunEnded;
+				RunTime = obj2[k].TotalTime;
+
+				ExecutedBy = obj2[k].ExecutedBy;
+				ComputerName = obj2[k].ComputerName;
+				SystemDate = obj2[k].SystemDate;
+				BrowserType = obj2[k].BrowserType;
+				ProjectName = obj2[k].ProjectName;
+				Environment = obj2[k].Environment;
+				Release = obj2[k].Release;
+				Run = obj2[k].Run;
+				
+				document.getElementById("SystemDate").innerHTML = SystemDate;
+				document.getElementById("RunStarted").innerHTML = RunStarted;
+				document.getElementById("RunEnded").innerHTML = RunEnded;
+				document.getElementById("TotalExecutionTime").innerHTML = RunTime;
+
+				document.getElementById("ExecutedBy").innerHTML = ExecutedBy.toUpperCase();
+				document.getElementById("BrowserType").innerHTML = BrowserType.toUpperCase();
+				document.getElementById("ProjectName").innerHTML = ProjectName.toUpperCase();
+				document.getElementById("TargettedEnvironment").innerHTML = Environment.toUpperCase();
+				document.getElementById("Release").innerHTML = Release.toUpperCase();
+				document.getElementById("Run").innerHTML = Run.toUpperCase();
+				//document.getElementById("ComputerName").innerHTML = "Computer Name : " + ComputerName;
+				//document.getElementById("DomainName").innerHTML = "Domain Name  : Telecom";
+				//document.getElementById("Tools").innerHTML = "Automation Tools : Selenium WebDriver - JAVA";
+								
+			});
+
+			Highcharts.chart('morris', {
+				chart: {
+					type: 'pie',
+					options3d: {
+						enabled: true,
+						alpha: 45,
+						beta: 0
+					}
+				},
+				title: {
+					text: 'Test Case Results in %'
+				},
+				tooltip: {
+					pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+				},
+				plotOptions: {
+					pie: {
+						allowPointSelect: true,
+						cursor: 'pointer',
+						depth: 35,
+						dataLabels: {
+							enabled: true,
+							format: '{point.name}'
+						}
+					}
+				},
+				colors: ['#5cb85c', '#d9534f', '#f0ad4e'],
+				series: [{
+					type: 'pie',
+					name: 'Status in % ',
+					data: [
+						['PASSED',  (countPassed*100)/totaltestcases],
+						['FAILED', (countFail*100)/totaltestcases],							
+						['IN-PROGRESS',(countInProgress*100)/totaltestcases]
+					]
+				}]
+			});
+
+			/*
+			var chart2 = new Morris.Bar({
+				element: 'morris-bar',
+				data: BarGraph,
+				xkey: 'TestCaseID',
+				ykeys: ['Duration'],
+				labels: ['Execution Time in Sec'],
+				hideHover: 'auto',
+				varyBarColor: true,
+				resize: true
+			});
+
+			$.jqplot.config.enablePlugins = true;
+				plot3 = $.jqplot('chart3', [objDuration], {
+                title:'Test Cases Execution Time in Minutes',
+                animate: !$.jqplot.use_excanvas,
+                seriesDefaults: {
+                    renderer: $.jqplot.BarRenderer,
+                    rendererOptions: {
+                        varyBarColor: true
+                    },
+                    pointLabels: {
+                        hideZeros: true
+                    }
+                },
+                axes: {
+                xaxis: {
+			
+					renderer: $.jqplot.CategoryAxisRenderer,
+                    ticks: objTestCaseId,
+                    tickRenderer: $.jqplot.CanvasAxisTickRenderer,
+					autoscale: true,
+                    tickOptions: {
+						angle: -30,
+                        fontSize: '7pt',
+                        showMark: false,
+                        showGridline: false
+                        }
+                    }
+					}
+				});
+				*/
+			function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				// add a zero in front of numbers<10
+				m = checkTime(m);
+				s = checkTime(s);
+				//document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+				document.getElementById('txt').innerHTML = "   " + today;
+				t = setTimeout(startTime, 500);
+			}
+			function checkTime(i) {
+				if (i < 10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+
+			
+
+			//chart2.render();
+			//chart1.render();
+
+			startTime();
+			//var theFileYouAreLookingFor = getClientFileName("C:/Users/kreddy6/Downloads/BaseReportsThu_July_18_25_13_08_BST_2017/Scripts/Results/");
+			function getClientFileName(folder) {
+				//get all the files in this folder
+				
+				var files = folder.Files;
+				//create an enumerator to check all the files
+				var enumerator = new Enumerator(files);
+				for(;!enumerator.atEnd(); enumerator.moveNext()) {
+					//get the file name we're about to check
+					var file = enumerator.item().Name;
+					//if the file name is too short skip this one
+					if (file.length<3) continue;
+					//check if this file's name matches, if it does, return it
+					if (file.substring(file.length - 3)==".ac") return file;
+				}
+				//if we finished this loop, then the file was not inside the folder
+				//so we check all the sub folders
+				var subFolders = folder.SubFolders;
+				//create an enumerator to check all sub folders
+				enumerator = new Enumerator(subFolders);
+				for(;!enumerator.atEnd(); enumerator.moveNext()) {
+					//get the sub folder we're about to check
+					var subFolder = enumerator.item();
+					//try to find the file in this sub folder
+					var fileName = getClientFileName(subFolder);
+					//if it was inside the sub folder, return it right away
+					if (fileName!=null) return fileName;
+				}
+				//if we get this far, we did not find the file in this folder
+				return null;
+			}
+			var newTargettedArray = ObjPreExecutionDetails.map(function (line) {
+				return parseInt(line.Targetted);
+			});
+			
+			var newExecutedArray = ObjPreExecutionDetails.map(function (line) {
+				return parseInt(line.Executed);
+			});
+			var newPassedArray = ObjPreExecutionDetails.map(function (line) {
+				return parseInt(line.Passed);
+			});
+			var newFailedArray = ObjPreExecutionDetails.map(function (line) {
+				return parseInt(line.Failed);
+			});
+			var newSkippedArray = ObjPreExecutionDetails.map(function (line) {
+				return parseInt(line.Skipped);
+			});
+			
+			var newInProgressArray = ObjPreExecutionDetails.map(function (line) {
+				return parseInt(line.InProgress);
+			});		
+			
+			var newReleaseArray = ObjPreExecutionDetails.map(function (line) {
+				return line.ExecutionDate + ' '+line.Run;
+			});	
+			
+		
+			var chart = new Highcharts.chart('LineHighChart', {
+				data: ObjPreExecutionDetails,
+				title: {
+					text: 'Test Execution History'
+				},
+
+				subtitle: {
+					text: ''
+				},
+				 xAxis: {
+					categories: ['RUN 1', 'RUN 2', 'RUN 3', 'RUN 4', 'RUN 5', 'RUN 6', 'RUN 7', 'RUN 8', 'RUN 9', 'RUN 10', 'RUN 11', 'RUN 12', 'RUN 13', 'RUN 14', 'RUN 15']
+					//categories:newReleaseArray
+				},
+				yAxis: {
+					title: {
+						text: 'Number of Test Cases'
+					}
+				},
+				legend: {
+					layout: 'vertical',
+					align: 'right',
+					verticalAlign: 'middle'
+				},
+
+				plotOptions: {
+					series: {
+						label: {						
+							connectorAllowed: false
+						}
+						//,pointStart: 1
+					}
+				},
+				tooltip: {
+						formatter: function(obj) {
+							console.log(this);
+							console.log(obj.chart.options.data[this.point.index]);
+							return '<br/> Date : ' + obj.chart.options.data[this.point.index].ExecutionDate + '<br /> Release : ' + obj.chart.options.data[this.point.index].Release + '<br/> Run : ' + obj.chart.options.data[this.point.index].Run;
+						}
+					}, 
+				series: [{
+					name: 'Targetted',
+					data: newTargettedArray
+				}, {
+					name: 'Executed',
+					data: newExecutedArray
+				}, {
+					name: 'Passed',
+					data: newPassedArray
+				}, {
+					name: 'Failed',
+					data: newFailedArray
+				}, {
+					name: 'Skipped',
+					data: newSkippedArray
+				}, {
+					name: 'InProgress',
+					data: newInProgressArray
+				}],
+
+				responsive: {
+					rules: [{
+						condition: {
+							maxWidth: 500
+						},
+						chartOptions: {
+							legend: {
+								layout: 'horizontal',
+								align: 'center',
+								verticalAlign: 'bottom'
+							}
+						}
+					}]
+				}
+
+			})
+		
+			// Set up the chart
+			var chart = new Highcharts.Chart({
+				chart: {
+					renderTo: 'chartContainer',
+					type: 'column',
+					options3d: {
+						enabled: true,
+						alpha: 0,
+						beta: 0,
+						depth: 20,
+						viewDistance: 10						
+					}
+				},
+				
+				title: {
+					text: 'Test Case Results in Count'
+				},
+				
+				xAxis: {
+					type: 'category'
+				},
+				yAxis: {
+					title: {
+						text: 'Status In Count'
+					}
+
+				},
+				legend: {
+					enabled: false
+				},
+				
+
+				series: [{
+					name: 'Status In Count  ',
+					colorByPoint: true,	
+					passCount: countPassed,
+					totalCount: countPassed+countFail+countInProgress,			
+					data: [
+							{ name:'PASSED',color: "#5cb85c", label: "PASSED", y: countPassed,labelTop: true},
+							{ name:'FAILED',color: "#d9534f", label: "FAILED", y: countFail},
+							{ name:'IN-PROGRESS',color: "#f0ad4e", label: "IN-PROGRESS", y: countInProgress}
+						]
+				}],
+
+			});
+
+			
+			// Set up the chart
+			var chart = new Highcharts.Chart({
+				chart: {
+					renderTo: 'container',
+					type: 'column',
+					options3d: {
+						enabled: true,
+						alpha: 0,
+						beta: 0,
+						depth: 100,
+						viewDistance: 25
+					}
+				},
+				title: {
+					text: 'Test Scenarios'
+				},
+				subtitle: {
+					text: 'Click on a item to see Test Report in detail'
+				},
+				xAxis: {
+					type: 'category'
+				},
+				yAxis: {
+					title: {
+						text: 'Execution Time in Seconds'
+					}
+
+				},
+				legend: {
+					enabled: false
+				},
+				plotOptions: {
+					column: {
+						depth: 25
+					},
+					series: {
+						borderWidth: 0,
+
+						point: {
+							events: {
+								click: function () {
+									var url = "DetailReport.html?testcaseid="+this.options.name
+									
+									if (document.location.href.indexOf('release=') > -1) {
+										jsonCurrentReleasePath = document.location.href.split('=')[1];
+										console.log(jsonCurrentReleasePath);															
+										location.href = url+"?release="+jsonCurrentReleasePath;										
+									}
+									else {
+										document.getElementById("IdExecutionSummary").href = "ExecutionSummary.html?page=1";		
+										location.href = url;										
+									}			
+									//location.href = url;
+									//location.href = this.options.url;
+								}
+							}
+						}
+					}
+				},
+				tooltip: {
+					formatter: function() {
+						console.log(this);
+						return '<br/> Test Case ID : ' + this.key  + '<br /> Test Name : ' + this.point.testtitle + '<br/> Execution In Seconds : ' + this.y;
+					}
+				}, 
+				series: [{
+					name: 'Execution in Seconds : ',
+					colorByPoint: true,
+					data: BarGraph
+				}],
+
+			});
+			
+			function showValues() {
+				$('#alpha-value').html(chart.options.chart.options3d.alpha);
+				$('#beta-value').html(chart.options.chart.options3d.beta);
+				$('#depth-value').html(chart.options.chart.options3d.depth);
+			}
+
+			// Activate the sliders
+			$('#sliders input').on('input change', function () {
+				chart.options.chart.options3d[this.id] = this.value;
+				showValues();
+				chart.redraw(false);
+			});
+
+			showValues();
+			
+			setInterval(function() {
+                 window.location.reload();
+                }, 300000);
+		}
+		//setInterval(page_refresh, 5*1000); //NOTE: period is passed in milliseconds
+		
+		
+		
+
+		var ObjPreExecutionDetails = PreviousExecutionDetails;
+		$(document).ready(function () {
+				
+			$("#chartHistory").jqGrid({
+
+				datatype: 'local',
+				data: ObjPreExecutionDetails,
+				autowidth: true,
+				//shrinkToFit: true, 
+				colMenu : false,
+                colModel: [
+                     {   
+						label : "Date",
+						//sorttype: 'integer',
+						name: 'ExecutionDate', 
+						key: true, 
+						width: '20%',
+						align: 'center',
+						classes: 'dateCol'
+					},
+					{   
+						label : "Release",
+						//sorttype: 'integer',
+						name: 'Release', 
+						key: true, 
+						width: '10%',
+						align: 'center',
+						classes: 'tdCol'
+					},
+					{   
+						label : "Run",
+						//sorttype: 'integer',
+						name: 'Run', 
+						key: true, 
+						width: '10%',
+						align: 'center',
+						classes: 'tdCol'
+					},
+					{   
+						label : "Targetted",
+						//sorttype: 'integer',
+						name: 'Targetted', 
+						key: true, 
+						width: '10%',
+						align: 'center',
+						classes: 'tdCol'
+					},
+                    {
+						label: "Executed",
+                        name: 'Executed',
+						key: true, 
+                        width: '10%',
+						align: 'center' ,
+						classes: 'tdCol'                       
+                    },
+                    { 
+						label: "Passed",
+                        name: 'Passed',
+                        width: '10%',
+						align: 'center' ,
+						classes: 'tdCol'                      
+                    },  
+					{   
+						label : "Failed",
+						//sorttype: 'integer',
+						name: 'Failed', 
+						key: true, 
+						width: '10%',
+						align: 'center',
+						classes: 'tdCol'
+					},					
+                    {
+						label : "Skipped",
+                        name: 'Skipped',						
+                        width: '10%',
+						align: 'center',
+						classes: 'tdCol'
+                    },
+					{
+						label : "In-Progress",
+                        name: 'InProgress',
+                        width: '10%',
+						align: 'center',
+						classes: 'tdCol'
+                    },
+					{
+						label : "Detail Results",
+						name: 'ExecutionPath',
+						width: '10%',
+						align: 'center',
+						classes: 'tdCol',
+						index: 'DetailResults',
+						formatter: linkFormater,
+						//formatter: 'showlink', 
+						formatoptions: { baseLinkUrl: 'javascript:', showAction: "Link('", addParam: "');"},
+						searchoptions: {
+							// dataInit is the client-side event that fires upon initializing the toolbar search field for a column
+							// use it to place a third party control to customize the toolbar
+							sopt : ['cn']
+						}
+					}            					
+                ],
+				loadonce: true,
+				viewrecords: true,
+				align: 'center',
+                height: 365,
+                rowNum: 10,
+				pager: "#gridpager"
+            });
+			
+			var totalJQGridPages = $("#chartHistory").jqGrid('getGridParam', 'lastpage');
+				
+				$("span.ui-icon").click(function () {
+					var button = $(this), oldPage = page;
+					if (button.hasClass('ui-icon-seek-first')) {
+						page = 1;
+					}
+					else if (button.hasClass('ui-icon-seek-prev') && page > 1) {
+						page = parseInt(page) - 1;
+					}
+					else if (button.hasClass('ui-icon-seek-next') && page < totalJQGridPages) {
+						page = parseInt(page) + 1;
+					}
+					else if (button.hasClass('ui-icon-seek-end')) {
+						page = totalJQGridPages;
+					}
+					
+					ChangeUrl('Page'+page, window.location.href.replace("page="+oldPage, "page="+page));
+				});
+				// activate the toolbar searching
+				$('#MainReport').jqGrid('filterToolbar');		
+			
+			
+			function Link(id) {					
+				var row = id.split("=");
+				var row_ID = row[1];				
+				var TestCaseID= $("#MainReport").getCell(row_ID, 'TestCaseID');
+				console.log (TestCaseID)
+				//var url = "DetailReport.html?testcaseid="+TestCaseID+"&filename="+fileRef; // sitename will be like google.com or yahoo.com
+				var url = "DetailReport.html?testcaseid="+TestCaseID; // sitename will be like google.com or yahoo.com
+				window.open(url,"","");									
+			}
+
+			function imageFormat(cellvalue, options, rowObject) {
+				if (cellvalue == "Pass") {
+					return "<img src='Logos/pass.ico' />";
+				} else if (cellvalue == "Fail") {
+					return "<img src='Logos/fail.ico' />";
+				} else {
+					return "<img src='Logos/warning.png' />";
+				}
+			}
+
+			function linkFormater(cellvalue, options, rowObject) {
+				//return "<a href='" + cellvalue + "'><u>Show Details</u></a>";
+				//console.log (cellvalue);
+				//console.log (options);
+				//console.log (rowObject);
+				var url = "index.html?release="+rowObject.ExecutionPath
+				//var url = "DetailReport.html?testcaseid="+options.rowId
+				return "<a href='"+url+"'><u>Detail Report</u></a>";
+				//return "<a href='DetailReport.html'><u>Detailed Report..</u></a>";					
+			}
+			
+			function statusFailed(){
+				alert("Hii");	
+				var strGridFilter  = "?status=Fail";
+				//var strGridFilter  = "?status=Pass";
+				//var strGridFilter  = "?status=InProgress";
+				//var strGridFilter  = "?status=All";
+				var jsonCurrentReleasePath = document.location.href.split('=')[1];
+				if(jsonCurrentReleasePath.length == 0){
+					var GridFilterUrl = "\ExecutionSummary.html?page=1"+strGridFilter;	
+				}else {
+					var GridFilterUrl = "\ExecutionSummary.html?page=1?release=" + jsonCurrentReleasePath + strGridFilter;	
+				}		
+				return GridFilterUrl
+				console.log(GridFilterUrl + " - Execution Summary Grid Filter");
+			} 
+			
+			
+		});
+	</script>
+</body>
+
+</html>
