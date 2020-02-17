@@ -18,25 +18,21 @@ public class SeleniumHelper implements IwebComponent{
 	
 	private WebDriver driver;
 	private WebElement element;
+	public static WebElement ObjReuseWebElement;
 	private String strElementId ;
-	//PropertyFileReader objPropertyFileReader ;
 	RepotrsHelper objRepotrsHelper;
 	private Logger oLog = LoggerHelper.getLogger(SeleniumHelper.class);
-	
+
 	public SeleniumHelper(WebDriver driver) {
 		this.driver = driver;
-		//this.objPropertyFileReader = new PropertyFileReader();
 		objRepotrsHelper = new RepotrsHelper();
 		oLog.debug("AlertHelper : " + this.driver.hashCode());
 	}
-
 	public  WebElement FindElement (String strObjectProp , String strElement)
 	{
 		element = null;
-
 		try
 		{
-
 			if (strObjectProp.length() > 0 && strElement.length() > 0)
 			{
 				switch (strObjectProp.toLowerCase())

@@ -1,234 +1,110 @@
 package TestCases;
 
-
-
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.WebDriver;
 import org.ekayukta.test.ui.framework.filereader.PropertyFileReader;
 import org.ekayukta.test.ui.framework.helper.InitializeWebDrive;
 import org.ekayukta.test.ui.framework.helper.RepotrsHelper;
 import org.ekayukta.test.ui.framework.helper.SeleniumHelper;
-
-import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 
 public class Orely_Token_Authentication {
 	
 	public String strServiceProvider = null;
 	public String strDestination = null;
-	public String strOrelyEnvironmnet = null;
-	public String appOrelyURL = null;
 	public String strOTPGenerated = "Null";
-	public String strOTPDpxFilePath = null;
-	public String strVirtualToken = null;
-	public String strDpxKey = null;
 	public String strSPIEnabled = null;
-	public String strBrowser = null;
 	InitializeWebDrive initializeWebDrive = null;
 	SeleniumHelper objselHelper = null;
 	RepotrsHelper objRepotrsHelper;
-	WebDriver WebDriver = null;
-	WebElement objWebElement = null;
+	//WebElement objWebElement = null;
 
 	public void OrelyAuthentication(HashMap<String, String> hashMapTestData) throws Exception {
 		try {
-			//Boolean s = linkExists("https://orely.dev.luxtrust.net/demo/startParametrized.jsp".toString());
 			initializeWebDrive = new InitializeWebDrive();
-			WebDriver = initializeWebDrive.browserInit();
 			objRepotrsHelper = new RepotrsHelper();
-			objselHelper = new SeleniumHelper(WebDriver);
-
-			DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss");
-			LocalDateTime startTime = LocalDateTime.now();
-			String strPath = Paths.get("").toAbsolutePath().toString() + File.separator + "Resources" + File.separator;
-			String jxlTestData = strPath + "TestData.xls";
-			strOTPDpxFilePath = strPath + "OTPGeneratorVacman" + File.separator
-					+ "2015-10-06_10000_first_9000_it_dev.dpx";
-			jxlTestData = new File(jxlTestData).toString();
-
-
-			strServiceProvider = PropertyFileReader.getPropertyValue("ServiceProvider");
-			strDestination = PropertyFileReader.getPropertyValue("Destination");
-			strOrelyEnvironmnet = PropertyFileReader.getPropertyValue("Environment");
-			appOrelyURL = PropertyFileReader.getPropertyValue("Website");
-			strSPIEnabled = PropertyFileReader.getPropertyValue("SPIEnabled");
-			strDpxKey = PropertyFileReader.getPropertyValue("DpxKey");
-			
-			strBrowser = PropertyFileReader.getPropertyValue("Browser");
-
-			String strTempTime = startTime.format(myFormatObj);
-			strTempTime = strTempTime.toString().replace("-", "").replace(":", "-");
-
-			Path OutPutPath = Paths.get(strPath + "OutPut" + File.separator + strOrelyEnvironmnet + strTempTime);
-			Files.createDirectories(OutPutPath);
-			Files.createDirectories(Paths.get(OutPutPath + File.separator + "log"));
-			String jxlTestExecutionReports = OutPutPath + File.separator + "log" + File.separator + "OutPut_"
-					+ strTempTime + ".xls";
-
-			System.out.println("	jxlTestData - " + jxlTestData);
-			System.out.println("	logTextFile - " + OutPutPath + File.separator + "log" + File.separator + "OutPut_"
-					+ strTempTime + ".txt");
-			System.out.println("	jxlTestExecutionReports - " + jxlTestExecutionReports);
-			
+			objselHelper = new SeleniumHelper(initializeWebDrive.browserInit());
+			Load_Properties_Env();
 			try {
-
 				orelyAuthenticationSubmit();
 				orelyAuthenticationDeviceSelection();
 				orelyAuthenticationValidation();
-
-				LocalDateTime endTime = LocalDateTime.now();
-				long minutes = startTime.until(endTime, ChronoUnit.MINUTES);
-				long seconds = startTime.until(endTime, ChronoUnit.SECONDS);
-				System.out.println("Test Execution Ended at : " + endTime.format(myFormatObj));
-				System.out.println("Total Test Execution time : " + minutes + " Minutes " + seconds + " Seconds");
 			} catch (Exception Ex) {
-				System.out.println("Exception in OrelyAuthentication - " + Ex);
-
-			}
-
+				System.out.println("Exception in OrelyAuthentication - " + Ex);}
 		} catch (Exception ex) {
-			System.out.println("Failed - ");
-		}
+			System.out.println("Failed - ");}
 		initializeWebDrive.tearDownDriver();
-
 	}
+
+	public void Load_Properties_Env()
+	{
+		PropertyFileReader.prop.setProperty("ServiceProvider",PropertyFileReader.getPropertyValue("ServiceProvider_UAT"));
+		PropertyFileReader.prop.setProperty("Destination",PropertyFileReader.getPropertyValue("Destination_UAT"));
+
+		if (PropertyFileReader.getEnvironment().equalsIgnoreCase("dev"))
+		{PropertyFileReader.prop.setProperty("ServiceProvider",PropertyFileReader.getPropertyValue("ServiceProvider_DEV"));
+		 PropertyFileReader.prop.setProperty("Destination",PropertyFileReader.getPropertyValue("Destination_DEV"));}
+
+		strServiceProvider = PropertyFileReader.getPropertyValue("ServiceProvider");
+		strDestination = PropertyFileReader.getPropertyValue("Destination");
+	}
+
 	public void orelyAuthenticationValidation() throws Exception {
 
 		String strExecutionStatus = "pass";
 		String strTEST_STATUS =  objselHelper.Get_Data("DT_ExpectedResult");
 		String strMinQAAExpected = objselHelper.Get_Data("DT_Expected_MINQAA");
 		String ActualResult;
-
 		//Thread.sleep(2000);
 		objselHelper.performOperation("eleResponseInformation","checktext","Response Information");
-		/*objWebElement = objselHelper.waitForElement("eleResponseInformation");
-		if (objWebElement != null) {
-			objRepotrsHelper.WriteResults("fail", "Validate Authentication", "Authentication page not displayed", "Authentication Page","Validation");
-		return;
-		}
-*/
 		objselHelper.performOperation("eleResponseID","writevisibletext","");
-			/*objWebElement = objselHelper.waitForElement("eleResponseID");
+		objselHelper.ObjReuseWebElement = objselHelper.waitForElement("eleResponseStatus");
+		if (objselHelper.ObjReuseWebElement != null) {
+			System.out.println("                     RESPONSE STATUS                   :" + objselHelper.ObjReuseWebElement.getText());
 
-			if (objWebElement != null) {
-				System.out.println("                     ID                         :" + objWebElement.getText());
-			}*/
-			objWebElement = objselHelper.waitForElement("eleResponseStatus");
-			if (objWebElement != null) {
-				System.out.println("                     RESPONSE STATUS                   :" + objWebElement.getText());
-
-				if (objWebElement.getText().contains("status:Success") && "SUCCESS".contentEquals(strTEST_STATUS.toUpperCase())) {
-					ActualResult = "                     Authentication Successfull";
-				} else if (objWebElement.getText().contains("status:AuthnInterrupt") && "CANCEL".contentEquals(strTEST_STATUS.toUpperCase())) {
-					ActualResult = "                     Authentication Successfull";
-				} else {
-					ActualResult = "                     Authentication Fail";
-
-					strExecutionStatus = "fail";
-				}
-			}
-			else
-			{
+			if (objselHelper.ObjReuseWebElement.getText().contains("status:Success") && "SUCCESS".contentEquals(strTEST_STATUS.toUpperCase())) {
+				ActualResult = "                     Authentication Successfull";
+			} else if (objselHelper.ObjReuseWebElement.getText().contains("status:AuthnInterrupt") && "CANCEL".contentEquals(strTEST_STATUS.toUpperCase())) {
+				ActualResult = "                     Authentication Successfull";
+			} else {
 				ActualResult = "                     Authentication Fail";
 				strExecutionStatus = "fail";
 			}
+		}
+		else
+		{ActualResult = "                     Authentication Fail";
+			strExecutionStatus = "fail";}
 
-			System.out.println(ActualResult);
-			objRepotrsHelper.WriteResults(strExecutionStatus, "Validate Authentication", ActualResult, "Authentication Page","Validation");
-
-
-			objselHelper.performOperation("eleResponseMessage","writevisibletext","");
-			/*objWebElement = objselHelper.waitForElement("eleResponseMessage");
-
-			if (objWebElement != null) {
-				System.out.println("                     RESPONSE MESSAGE           :" + objWebElement.getText());
-			}
-*/
-			objselHelper.performOperation("eleResponseDetails","writevisibletext","");
-			/*
-			objWebElement = objselHelper.waitForElement("eleResponseDetails");
-			if (objWebElement != null) {
-				System.out.println("                     RESPONSE DETAILS           :" + objWebElement.getText());
-			}
-*/
-			objselHelper.performOperation("eleResponseIssueInstant","writevisibletext","");
-			/*
-			objWebElement = objselHelper.waitForElement("eleResponseIssueInstant");
-			if (objWebElement != null) {
-				System.out.println("                     ISSUE INSTANT              :" + objWebElement.getText());
-			}
-*/
-			objselHelper.performOperation("eleResponseDistinguishedName","writevisibletext","");
+		System.out.println(ActualResult);
+		objRepotrsHelper.WriteResults(strExecutionStatus, "Validate Authentication", ActualResult, "Authentication Page","Validation");
 
 
-/*
-			objWebElement = objselHelper.waitForElement("eleResponseDistinguishedName");
-			if (objWebElement != null) {
-				System.out.println("                     DISTINGUISHED NAME         :" + objWebElement.getText());
-			}
-*/
-
-			objselHelper.performOperation("eleResponseDistinguishedName","writevisibletext","");
-
-
-			objWebElement = objselHelper.waitForElement("eleResponseTSPMode");
+		objselHelper.performOperation("eleResponseMessage","writevisibletext","");
+		objselHelper.performOperation("eleResponseDetails","writevisibletext","");
+		objselHelper.performOperation("eleResponseIssueInstant","writevisibletext","");
+		objselHelper.performOperation("eleResponseDistinguishedName","writevisibletext","");
+		objselHelper.performOperation("eleResponseDistinguishedName","writevisibletext","");
+		objselHelper.ObjReuseWebElement = objselHelper.waitForElement("eleResponseTSPMode");
 			ActualResult ="                    MinQAA Validation Fail";
 			strExecutionStatus = "fail";
-			if (objWebElement != null) {
-				System.out.println("                     TSP-MODE                   :" + objWebElement.getText());
+			if (objselHelper.ObjReuseWebElement != null) {
+				System.out.println("                     TSP-MODE                   :" + objselHelper.ObjReuseWebElement.getText());
 				if (!"NULL".equals(strMinQAAExpected.toUpperCase())) {
 
-					if (objWebElement.getText().equals(strMinQAAExpected.toUpperCase())) {
+					if (objselHelper.ObjReuseWebElement.getText().equals(strMinQAAExpected.toUpperCase())) {
 						ActualResult ="                    MinQAA Validation Pass";
-						//System.out.println("                    MinQAA Validation Pass");
-						//objSeleniumHelper.writeXLResults(jxlTestExecutionReports, intXLResultsRowNum, orelyTCNumber,strTEST_STATUS, "PASS");
 						strExecutionStatus = "pass";
-					} /*else {
-						//System.out.println("                    MinQAA Validation Fail");
-						//objSeleniumHelper.writeXLResults(jxlTestExecutionReports, intXLResultsRowNum, orelyTCNumber,strTEST_STATUS, "FAIL");
-						strExecutionStatus = "FAIL";
-					}*/
+					}
 					System.out.println(ActualResult);
 					objRepotrsHelper.WriteResults(strExecutionStatus, "Validate MinQAA", ActualResult, "Authentication Page","Validation");
-
 				}
-
 			}
-
 		objselHelper.performOperation("eleResponseTSPID","writevisibletext","");
-			/*
-			objWebElement = objselHelper.waitForElement("eleResponseTSPID");
-			if (objWebElement != null) {
-				System.out.println("                     TSP-ID                     :" + objWebElement.getText());
-			}
-*/
-
-
-
 	}
 
 
-	public boolean linkExists(String URLName) {
-		try {
-			HttpURLConnection.setFollowRedirects(false);
-			HttpURLConnection con =
-					(HttpURLConnection) new URL(URLName).openConnection();
-			con.setRequestMethod("HEAD");
-			return (con.getResponseCode() == HttpURLConnection.HTTP_OK);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			return false;
-		}
-	}
+
 
 	public void orelyAuthenticationSubmit() throws Exception {
 
@@ -245,7 +121,6 @@ public class Orely_Token_Authentication {
 				objselHelper.performOperation("eleMinQAA", "clearandset", "DT_MINQAA");
 			}
 		}
-
 		objselHelper.performOperation("eleTspId", "setnotnull", "DT_TSP_ID");
 
 		String strTSP_MODE = objselHelper.Get_Data("DT_TSP_MODE");
@@ -286,7 +161,7 @@ public class Orely_Token_Authentication {
 		strDEVICE_TYPE = objselHelper.Get_Data("DT_DEVICE_TYPE");
 		if ("GO6".equals(strDEVICE_TYPE.toUpperCase())) {
 
-			String strOTPGenerated = ObjGeneric.generateOTP(objselHelper.Get_Data("DT_VIRTUAL_TOKEN"));
+			strOTPGenerated = ObjGeneric.generateOTP(objselHelper.Get_Data("DT_VIRTUAL_TOKEN"));
 
 			strTSP_ID = objselHelper.Get_Data("DT_TSP_ID");
 			if ("NULL".equals(strTSP_ID.toUpperCase())) {
@@ -325,9 +200,6 @@ public class Orely_Token_Authentication {
 				}
 
 			}
-
-			
-
 			if ("YES".equals(strSPIEnabled.toUpperCase())) {
 				// SPI is enabled
 				objselHelper.performOperation("eleOTPAuthenticate", "click", "");
@@ -342,16 +214,13 @@ public class Orely_Token_Authentication {
 				objselHelper.performOperation("eleAuthenticateCancel", "click", "");
 				// Cancel the Authentication
 			}
-
 			strOTP_AUTHENTICATION = objselHelper.Get_Data("DT_OTP_AUTHENTICATION");
 			if ("YES".equals(strOTP_AUTHENTICATION.toUpperCase())) {
 				// Cancel the Authentication
 				objselHelper.performOperation("eleOTP", "clearandset", strOTPGenerated);
-				objWebElement = objselHelper.waitForElement("eleOTP");
-				if (!strOTPGenerated.contentEquals(objWebElement.getAttribute("value"))) {
-					objselHelper.performOperation("eleOTP", "clearandset", strOTPGenerated);
-				}
-
+				objselHelper.ObjReuseWebElement = objselHelper.waitForElement("eleOTP");
+				if (!strOTPGenerated.contentEquals(objselHelper.ObjReuseWebElement.getAttribute("value"))) {
+					objselHelper.performOperation("eleOTP", "clearandset", strOTPGenerated);}
 				objselHelper.performOperation("eleOTPAuthenticate", "click", "");
 
 			} else if ("NO".equals(strOTP_AUTHENTICATION.toUpperCase())) {

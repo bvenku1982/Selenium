@@ -1,0 +1,370 @@
+[1581420193.036][INFO]: Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614})
+[1581420193.036][INFO]: Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1581420193.486][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "window-size=3840x2160", "--disable-notifications" ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "window-size=3840x2160", "--disable-notifications" ],
+         "extensions": [  ]
+      }
+   }
+}
+[1581420193.490][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1581420193.490][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1581420193.493][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-notifications --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension="C:\Users\RBU_LU~1\AppData\Local\Temp\2\scoped_dir3316_1439978141\internal" --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\RBU_LU~1\AppData\Local\Temp\2\scoped_dir3316_1965343977" --window-size=3840x2160 data:,
+[1581420194.043][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1581420195.049][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "79.0.3945.130",
+      "chrome": {
+         "chromedriverVersion": "79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614})",
+         "userDataDir": "C:\\Users\\RBU_LU~1\\AppData\\Local\\Temp\\2\\scoped_dir3316_1965343977"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:58843"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify"
+   },
+   "sessionId": "73905057c3bd3496b5166172d55c816b"
+}
+[1581420195.062][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND MaximizeWindow {
+
+}
+[1581420195.062][INFO]: Waiting for pending navigations...
+[1581420195.064][INFO]: Done waiting for pending navigations. Status: ok
+[1581420195.065][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1581420196.180][INFO]: Waiting for pending navigations...
+[1581420196.181][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.181][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE MaximizeWindow {
+   "height": 1416,
+   "width": 2576,
+   "x": -8,
+   "y": -8
+}
+[1581420196.192][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND SetTimeouts {
+   "pageLoad": 240000
+}
+[1581420196.192][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE SetTimeouts
+[1581420196.209][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND SetTimeouts {
+   "implicit": 1000
+}
+[1581420196.209][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE SetTimeouts
+[1581420196.220][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND DeleteAllCookies {
+
+}
+[1581420196.220][INFO]: Waiting for pending navigations...
+[1581420196.220][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.222][INFO]: Waiting for pending navigations...
+[1581420196.222][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.222][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE DeleteAllCookies
+[1581420196.231][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND Navigate {
+   "url": "https://orely.dev.luxtrust.net/demo/startParametrized.jsp"
+}
+[1581420196.231][INFO]: Waiting for pending navigations...
+[1581420196.232][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.492][INFO]: Waiting for pending navigations...
+[1581420196.573][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.573][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE Navigate
+[1581420196.595][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "return Math.max(document.body.scrollHeight, document.body.offsetHeight,\n    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);"
+}
+[1581420196.595][INFO]: Waiting for pending navigations...
+[1581420196.596][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.602][INFO]: Waiting for pending navigations...
+[1581420196.603][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.603][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE ExecuteScript 1286
+[1581420196.620][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "return window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;"
+}
+[1581420196.620][INFO]: Waiting for pending navigations...
+[1581420196.620][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.624][INFO]: Waiting for pending navigations...
+[1581420196.625][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.625][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE ExecuteScript 2560
+[1581420196.643][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "return window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;"
+}
+[1581420196.643][INFO]: Waiting for pending navigations...
+[1581420196.644][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.646][INFO]: Waiting for pending navigations...
+[1581420196.647][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.647][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE ExecuteScript 1286
+[1581420196.660][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND ExecuteScript {
+   "args": [ 0 ],
+   "script": "scrollTo(0, arguments[0]); return [];"
+}
+[1581420196.660][INFO]: Waiting for pending navigations...
+[1581420196.660][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.663][INFO]: Waiting for pending navigations...
+[1581420196.664][INFO]: Done waiting for pending navigations. Status: ok
+[1581420196.664][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE ExecuteScript [  ]
+[1581420196.677][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND Screenshot {
+
+}
+[1581420196.677][INFO]: Waiting for pending navigations...
+[1581420196.678][INFO]: Done waiting for pending navigations. Status: ok
+[1581420197.534][INFO]: Waiting for pending navigations...
+[1581420197.536][INFO]: Done waiting for pending navigations. Status: ok
+[1581420197.536][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAADwAAAAeJCAYAAABUa/NKAAAAAXNSR0IArs4c6QAAIABJREFUeJzs3X9sU3e+//mXKXOvu7fz3SDx1Tq7jL51L5Um7FTC6HZFots/MGK0GDESjqiEI0aipqNtTSu1SSvRBLSiDl21CbPbSVqpxUUqXxup3BipCCNdhPlKjGKkuYqR2..."
+[1581420197.783][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "var scrY = window.scrollY;if(scrY){return scrY;} else {return 0;}"
+}
+[1581420197.783][INFO]: Waiting for pending navigations...
+[1581420197.783][INFO]: Done waiting for pending navigations. Status: ok
+[1581420197.785][INFO]: Waiting for pending navigations...
+[1581420197.786][INFO]: Done waiting for pending navigations. Status: ok
+[1581420197.786][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE ExecuteScript 0
+[1581420197.888][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420197.888][INFO]: Waiting for pending navigations...
+[1581420197.889][INFO]: Done waiting for pending navigations. Status: ok
+[1581420198.937][INFO]: Waiting for pending navigations...
+[1581420198.937][INFO]: Done waiting for pending navigations. Status: ok
+[1581420198.937][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='requestType']//option[text()='Authentication']"}
+  (Session info: chrome=79.0.3945.130)
+[1581420199.957][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420199.957][INFO]: Waiting for pending navigations...
+[1581420199.957][INFO]: Done waiting for pending navigations. Status: ok
+[1581420200.997][INFO]: Waiting for pending navigations...
+[1581420200.998][INFO]: Done waiting for pending navigations. Status: ok
+[1581420200.998][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='requestType']//option[text()='Authentication']"}
+  (Session info: chrome=79.0.3945.130)
+[1581420202.007][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420202.007][INFO]: Waiting for pending navigations...
+[1581420202.007][INFO]: Done waiting for pending navigations. Status: ok
+[1581420203.047][INFO]: Waiting for pending navigations...
+[1581420203.048][INFO]: Done waiting for pending navigations. Status: ok
+[1581420203.048][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='requestType']//option[text()='Authentication']"}
+  (Session info: chrome=79.0.3945.130)
+[1581420204.057][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420204.057][INFO]: Waiting for pending navigations...
+[1581420204.058][INFO]: Done waiting for pending navigations. Status: ok
+[1581420205.092][INFO]: Waiting for pending navigations...
+[1581420205.092][INFO]: Done waiting for pending navigations. Status: ok
+[1581420205.092][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such element: Unable to locate element: {"method":"xpath","selector":"//select[@id='requestType']//option[text()='Authentication']"}
+  (Session info: chrome=79.0.3945.130)
+[1581420206.102][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420206.102][INFO]: Waiting for pending navigations...
+[1581420206.103][INFO]: Done waiting for pending navigations. Status: ok
+[1581420206.925][INFO]: Waiting for pending navigations...
+[1581420206.926][INFO]: Done waiting for pending navigations. Status: ok
+[1581420206.936][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement
+[1581420207.951][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420207.951][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420208.964][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420208.964][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420209.977][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420209.977][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420211.002][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420211.003][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420212.018][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420212.018][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420213.043][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420213.043][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420214.062][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420214.062][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420215.086][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420215.087][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420216.112][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420216.112][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420217.127][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420217.127][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420218.152][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420218.152][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420219.171][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420219.171][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420220.190][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420220.190][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420221.213][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420221.214][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420222.231][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//select[@id='requestType']//option[text()='Authentication']"
+}
+[1581420222.231][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE FindElement ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420223.245][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND ExecuteScript {
+   "args": [  ],
+   "script": "return Math.max(document.body.scrollHeight, document.body.offsetHeight,\n    document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);"
+}
+[1581420223.245][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE ExecuteScript ERROR no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=79.0.3945.130)
+[1581420223.259][INFO]: [73905057c3bd3496b5166172d55c816b] COMMAND Quit {
+
+}
+[1581420223.259][INFO]: [73905057c3bd3496b5166172d55c816b] RESPONSE Quit

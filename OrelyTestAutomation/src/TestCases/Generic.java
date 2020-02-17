@@ -3,7 +3,6 @@ package TestCases;
 import lu.luxtrust.vasco.OTPGenerator;
 import org.ekayukta.test.ui.framework.filereader.PropertyFileReader;
 import org.ekayukta.test.ui.framework.helper.ResourceHelper;
-
 import java.io.File;
 import java.lang.reflect.Field;
 import java.nio.file.Path;
@@ -21,7 +20,7 @@ public class Generic {
             Path path = Paths.get(OTPDpxFile);
             Path ptbasePath = Paths.get(basePath);
             if (PropertyFileReader.prop.getProperty("OTPGeneratorPath")==null) {
-                addLibraryPath(PropertyFileReader.getPropertyValue("OTPGeneratorVacman"));
+                addLibraryPath(basePath);
             }
             PropertyFileReader.prop.setProperty("OTPGeneratorPath","true");
             System.out.println(System.getProperty("java.library.path"));

@@ -1,0 +1,148 @@
+[1581503268.715][INFO]: Starting ChromeDriver 79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614})
+[1581503268.715][INFO]: Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1581503269.398][INFO]: [1316a39ff31d208a00376c9f32ccac02] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [ "window-size=3840x2160", "--disable-notifications" ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [ "window-size=3840x2160", "--disable-notifications" ],
+         "extensions": [  ]
+      }
+   }
+}
+[1581503269.402][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1581503269.403][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1581503269.405][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-notifications --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --load-extension="C:\Users\RBU_LU~1\AppData\Local\Temp\2\scoped_dir2616_1870269428\internal" --log-level=0 --no-first-run --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\RBU_LU~1\AppData\Local\Temp\2\scoped_dir2616_1044476201" --window-size=3840x2160 data:,
+[1581503269.967][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1581503270.976][INFO]: [1316a39ff31d208a00376c9f32ccac02] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "79.0.3945.130",
+      "chrome": {
+         "chromedriverVersion": "79.0.3945.36 (3582db32b33893869b8c1339e8f4d9ed1816f143-refs/branch-heads/3945@{#614})",
+         "userDataDir": "C:\\Users\\RBU_LU~1\\AppData\\Local\\Temp\\2\\scoped_dir2616_1044476201"
+      },
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:53003"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify"
+   },
+   "sessionId": "1316a39ff31d208a00376c9f32ccac02"
+}
+[1581503271.042][INFO]: [1316a39ff31d208a00376c9f32ccac02] COMMAND MaximizeWindow {
+
+}
+[1581503271.042][INFO]: Waiting for pending navigations...
+[1581503271.044][INFO]: Done waiting for pending navigations. Status: ok
+[1581503271.045][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1581503272.322][INFO]: Waiting for pending navigations...
+[1581503272.324][INFO]: Done waiting for pending navigations. Status: ok
+[1581503272.324][INFO]: [1316a39ff31d208a00376c9f32ccac02] RESPONSE MaximizeWindow {
+   "height": 1416,
+   "width": 2576,
+   "x": -8,
+   "y": -8
+}
+[1581503272.347][INFO]: [1316a39ff31d208a00376c9f32ccac02] COMMAND SetTimeouts {
+   "pageLoad": 240000
+}
+[1581503272.347][INFO]: [1316a39ff31d208a00376c9f32ccac02] RESPONSE SetTimeouts
+[1581503272.378][INFO]: [1316a39ff31d208a00376c9f32ccac02] COMMAND SetTimeouts {
+   "implicit": 1000
+}
+[1581503272.378][INFO]: [1316a39ff31d208a00376c9f32ccac02] RESPONSE SetTimeouts
+[1581503272.400][INFO]: [1316a39ff31d208a00376c9f32ccac02] COMMAND DeleteAllCookies {
+
+}
+[1581503272.400][INFO]: Waiting for pending navigations...
+[1581503272.401][INFO]: Done waiting for pending navigations. Status: ok
+[1581503272.404][INFO]: Waiting for pending navigations...
+[1581503272.405][INFO]: Done waiting for pending navigations. Status: ok
+[1581503272.405][INFO]: [1316a39ff31d208a00376c9f32ccac02] RESPONSE DeleteAllCookies
+[1581503272.415][INFO]: [1316a39ff31d208a00376c9f32ccac02] COMMAND Quit {
+
+}
+[1581503272.443][INFO]: [1316a39ff31d208a00376c9f32ccac02] RESPONSE Quit

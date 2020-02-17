@@ -32,6 +32,15 @@ public class PropertyFileReader implements IconfigReader {
 			prop.setProperty("OS",strOperatingSystem);
 			prop.setProperty("ComputerName",strMachineName);
 
+			prop.setProperty("TestData",getPropertyValue("TestData_UAT"));
+			prop.setProperty("Website",getPropertyValue("Website_UAT"));
+
+			if (getEnvironment().equalsIgnoreCase("dev"))
+			{
+				prop.setProperty("TestData",getPropertyValue("TestData_DEV"));
+				prop.setProperty("Website",getPropertyValue("Website_DEV"));
+			}
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

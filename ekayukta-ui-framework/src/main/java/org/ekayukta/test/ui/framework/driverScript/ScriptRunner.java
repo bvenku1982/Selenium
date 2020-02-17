@@ -55,9 +55,6 @@ public class ScriptRunner {
 		PropertyFileReader.prop.setProperty("CurrentReleaseJs",ptJSFile.toAbsolutePath().toString());
 		PropertyFileReader.prop.setProperty("ExecutionDetailsJson",ptExecutionDetailsJSonFile.toAbsolutePath().toString());
 		PropertyFileReader.prop.setProperty("ExecutionDetailsJs",ptExecutionDetailsJSFile.toAbsolutePath().toString());
-
-
-
 	}
 
 	public void Run(){
@@ -70,7 +67,7 @@ public class ScriptRunner {
 			//Path ptRunTimePropFilePath = ResourceHelper.getSpecificResourcePath("configfile" + File.separator +"runtime.properties");
 			Path ptTestPlanFilePath = ResourceHelper.getSpecificResourcePath("testplan" + File.separator +"TestPlan.xls");
 			Path ptElementRepoFilePath = ResourceHelper.getSpecificResourcePath("objectrepository" + File.separator +"ObjectRepository.xls");
-			Path ptTestDataFilePath = ResourceHelper.getSpecificResourcePath("exceldata" + File.separator +"TestData.xls");
+			Path ptTestDataFilePath = ResourceHelper.getSpecificResourcePath("exceldata" + File.separator + PropertyFileReader.getPropertyValue("TestData"));
 			//####################################################################################################################################################
 			//Reporting
 			//####################################################################################################################################################
@@ -78,23 +75,17 @@ public class ScriptRunner {
 			RepotrsHelper objReporter = new RepotrsHelper();
 			objReporter.CreateMainHTMLHeader_01();
 			objReporter.InitailizeHtmlRepot_02(ptTestPlanFilePath);
-
 			hashMapRepo = objExcelFileReader.FetchElementRepo(ptElementRepoFilePath);
-
 			List<String> lstTestSuite = objExcelFileReader.CaptureTestSuite(ptTestPlanFilePath);
-
 			System.out.println("");
 			for (String strTestSet : lstTestSuite) {
-
 				String strTestSuiteId = strTestSet.split(";")[0];
 				// String strTSName = strTestSet.split(";")[1];
 				List<String> lstTestCases = objExcelFileReader.CaptureTestCases(ptTestPlanFilePath, strTestSuiteId);
 				//Make sure to load all test suites and test cases
-
 				System.out.println("");
 				System.out.println("Execution Started for the Test Set - " + strTestSuiteId);
 				for (String strTestCase : lstTestCases) {
-
 					String strTCId = strTestCase.split(";")[0];
 					String strTCModuleName = strTestCase.split(";")[1];
 					String strTCName = strTestCase.split(";")[2];
@@ -107,10 +98,8 @@ public class ScriptRunner {
 						Object objTestClassInstance = objTestClass.newInstance();
 						Method objTestMethod = objTestClass.getDeclaredMethod(strTCName, HashMap.class);
 						objReporter.createHTMLHeader_TC_03(strTCId);
-
 						objTestMethod.invoke(objTestClassInstance, hashMapTestData);
 						objReporter.createHTMLFooter_TC_04(strTCId);
-
 						if (objReporter.failcount.get() > 0)
 						{
 							objReporter.WriteMainTCResults(strTCId,strTestSuiteId, 1,"Found");
@@ -118,7 +107,6 @@ public class ScriptRunner {
 						{
 							objReporter.WriteMainTCResults(strTCId,strTestSuiteId, 0,"Found");
 						}
-
 					} catch (Exception EX) {
 						EX.printStackTrace();
 						System.out.println("Test Case Not Found Exception -" + EX.toString());

@@ -1,5 +1,7 @@
 package org.ekayukta.test.ui.framework.helper;
 
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -88,6 +90,21 @@ public class InitializeWebDrive {
 		objReportsHelper.WriteResults("pass", "Launch the Application", "Successfully Launched : " + PropertyFileReader.getWebsite() , "Browser Name : " + PropertyFileReader.getBrowser(), "Launch");
 		oLog.info("Initializing the driver");
 		return driver;
+	}
+
+	public boolean linkExists() {
+		try {
+			String URLName = PropertyFileReader.getWebsite();
+			HttpURLConnection.setFollowRedirects(false);
+			HttpURLConnection con =
+					(HttpURLConnection) new URL(URLName).openConnection();
+			con.setRequestMethod("HEAD");
+			return (con.getResponseCode() == HttpURLConnection.HTTP_OK);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 
 	public WebDriver browserInit(String url) throws Exception {

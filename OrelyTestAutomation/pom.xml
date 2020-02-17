@@ -40,7 +40,6 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
     <dependencies>
@@ -50,30 +49,9 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
-            <groupId>net.sourceforge.tess4j</groupId>
-            <artifactId>tess4j</artifactId>
-            <version>4.4.1</version>
-        </dependency>
-        <dependency>
 			<groupId>lu.luxtrust.vasco</groupId>
 			<artifactId>OTPGenerator-Light</artifactId>
             <version>1.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-api</artifactId>
-            <version>3.141.59</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi</artifactId>
-            <version>4.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
-            <version>3.141.59</version>
         </dependency>
     </dependencies>
 </project>
